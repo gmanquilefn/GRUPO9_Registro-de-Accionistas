@@ -1,1 +1,1 @@
-Proyecto grupal del ramo Ingeniería de Software I de la Universidad Andrés Bello.
+Proyecto grupal de los ramos Ingeniería de Software I y Ingeniería de Software II de la Universidad Andrés Bello.
