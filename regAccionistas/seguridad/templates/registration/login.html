@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Registro de Accionistas</title>
+    <title>Registro Accionistas - Inicio Sesión</title>
     <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css"> -->
@@ -23,25 +23,12 @@
                     <h2 class="text-info">Inicio de Sesión</h2>
                     <p></p>
                 </div>
-                <form method="post">
+                <form method="post" action= "{% url 'login' %}">
                     {% csrf_token %}
-                    <!--<div class="form-group"><label>Nombre de Usuario</label><input class="form-control" type="username">
-                        <td>{{ form.username.label_tag }}</td>
-                        <td>{{ form.username }}</td>
-                    </div>-->
-                    <!--<div class="form-group"><label>Contraseña</label><input class="form-control" type="password">
-                        <td>{{ form.password.label_tag }}</td>
-                        <td>{{ form.password }}</td>
-                    </div>-->
-                    <div>
-                        <td>{{ form.username.label_tag }}</td>
-                        <td>{{ form.username }}</td>
-                    </div>
-                    <div>
-                        <td>{{ form.password.label_tag }}</td>
-                        <td>{{ form.password }}</td>
-                    </div>
+                    <div class="form-group"><label>Nombre de Usuario</label><input class="form-control" id="username" name="username" type="username"></div>
+                    <div class="form-group"><label>Contraseña</label><input class="form-control" id="password" name="password" type="password"></div>
                     <div class="form-group"><button class="btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesión</button></div>
+                    <input type="hidden" name="next" value="{{ next }}">
                 </form>
             </div>
         </section>

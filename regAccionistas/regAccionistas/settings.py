@@ -26,8 +26,8 @@ SECRET_KEY = '74p5_=yl_fv^na=h75b86$@snq=0%hrm&=+$esx^zxq+g39&gl'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-#LOGIN_REDIRECT_URL = 'index'
-#LOGOUT_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'
 
 
 # Application definition

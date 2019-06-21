@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>Registro de Accionistas</title>
     <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
     <!-- <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i' %}"> -->
     <link rel="stylesheet" href="{% static 'assets/fonts/simple-line-icons.min.css' %}">
@@ -24,7 +24,7 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" >Terceros</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" >Traspasos</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" >Dividendos</a></li>
-                    <li class="nav-item" role="presentation"><a href="{% url 'logout' %} " class="nav-link active" style="background-color: #cf0808;">Cerrar Sesión</a></li>
+                    <li class="nav-item" role="presentation"><a href="{% url 'logout' %}" class="nav-link active">Cerrar Sesión</a></li>
                 </ul>
         </div>
         </div>
@@ -32,7 +32,7 @@
     <main class="page landing-page">
         <section class="clean-block clean-hero" style="background-image:url(&quot;&quot;);color:rgba(9, 162, 255, 0.85);">
             <div class="text">
-                <h2>Bienvenido {{user.username}}!</h2>
+                    <h2>Bienvenido {{user.username}}!</h2>
                 <p></p>
             </div>
         </section>
