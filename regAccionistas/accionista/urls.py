@@ -4,6 +4,7 @@ from accionista import views
 
 
 urlpatterns = [
-    url(r'^accionista_form/',views.HomePageView.as_view(),name="accionista_form"),
+    url(r'^accionista_form/',views.HomePageView2.as_view(),name="accionista_form"),
+
     path('accounts/', include('django.contrib.auth.urls'))
 ]
