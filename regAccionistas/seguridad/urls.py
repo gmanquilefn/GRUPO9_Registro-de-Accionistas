@@ -8,5 +8,6 @@ from seguridad import views
 
 urlpatterns = [
     url(r'^$',views.HomePageView.as_view(),name="index"),
-    path('accounts/', include('django.contrib.auth.urls'))
+    url(r'^accionista_form/',views.HomePageView2.as_view(),name="accionista_form"),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
