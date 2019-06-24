@@ -1,52 +1,19 @@
+{% extends "base.html" %}
 {% load static %}
 <!DOCTYPE html>
 <html>
     
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Registro de Accionistas</title>
-    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
-    <!-- <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i' %}"> -->
-    <link rel="stylesheet" href="{% static 'assets/fonts/simple-line-icons.min.css' %}">
-    <!-- <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css' %}"> -->
-    <link rel="stylesheet" href="{% static 'assets/css/smoothproducts.css' %}">
-</head>
-
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand logo" href="#">Registro de Accionistas</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="localhost:8000/index">Inicio</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" >Accionistas</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" >Terceros</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" >Traspasos</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" >Dividendos</a></li>
-                    <li class="nav-item" role="presentation"><a href="{% url 'logout' %}" class="nav-link active">Cerrar Sesión</a></li>
-                </ul>
-        </div>
-        </div>
-    </nav>
+    {% block content %}
     <main class="page landing-page">
-        <section class="clean-block clean-hero" style="background-image:url(&quot;&quot;);color:rgba(9, 162, 255, 0.85);">
-            <div class="text">
-                    <h2>Bienvenido {{user.username}}!</h2>
-                <p></p>
-            </div>
-        </section>
-    </main>
-    <footer class="page-footer dark">
-        <div class="footer-copyright">
-            <p>© 2019 Universidad Andrés Bello</p>
-        </div>
-    </footer>
-    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
-    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
-    <!-- <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js' %}"></script> -->
-    <script src="{% static 'assets/js/smoothproducts.min.js' %}"></script>
-    <script src="{% static 'assets/js/theme.js' %}"></script>
+            <section class="clean-block clean-hero" style="background-image:url(&quot;static/assets/img/image.png&quot;);color:rgba(9, 162, 255, 0.85);">
+                <div class="text">
+                        <h2>Bienvenido {{user.username}}!</h2>
+                    <p></p>
+                </div>
+            </section>
+        </main>
+    {% endblock %}
 </body>
 
 </html>
