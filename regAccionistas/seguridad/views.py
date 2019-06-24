@@ -15,3 +15,7 @@ class HomePageView2(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'accionista_form.html', context=None)
 
+class HomePageView3(LoginRequiredMixin, TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'creacion_acc.html', context=None)
+

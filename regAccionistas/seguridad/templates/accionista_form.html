@@ -3,9 +3,13 @@
 
 {% block content %}
 <main class="page landing-page">
-    <section class="clean-block clean-hero" style="background-image:url(&quot;static/assets/img/image.png&quot;);color:rgba(9, 162, 255, 0.85);">
+    <section class="clean-block clean-hero" style="background-image:url(&quot;&quot;);color:rgb(255,255,255);">
         <div class="text">
-            <h2>Bienvenido ctm {{user.username}}!</h2>
+            <div class="btn-group-vertical btn-group-lg">
+                <button class= "btn btn-primary" type="button">Buscar Accionista</button>
+                <a href="http://127.0.0.1:8000/creacion_acc/" class="btn btn-primary">Crear Accionista</a>
+                <button class= "btn btn-primary" type="button">Modificar Accionista</button>
+            </div>
         </div>
     </section>
 </main>
