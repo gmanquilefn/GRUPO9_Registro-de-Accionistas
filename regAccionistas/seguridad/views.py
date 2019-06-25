@@ -5,29 +5,22 @@ from django.views.generic.edit import CreateView, UpdateView
 from accionista import models
 from accionista.models import Accionista
 
-
-# Create your views here.
-
 class HomePageView(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'index.html', context=None)
 
-class HomePageView2(LoginRequiredMixin, TemplateView):
+class AccionistasView(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
-        return render(request, 'accionista_form.html', context=None)
-
-class HomePageView3(LoginRequiredMixin, TemplateView):
-    def get(self, request, **kwargs):
-        return render(request, 'creacion_acc.html', context=None)
+        return render(request, 'accionistas.html', context=None)
 
 class CreateAccionista(CreateView):
     model = Accionista
-    template_name = './aaaa.html'
-    fields = ['run', 'nombre', 'apellido', 'totalAcciones', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax']
-    
+    template_name = './crear.html'
+    fields = '__all__'
+
 class UpdateAccionista(UpdateView):
     model = Accionista
-    template_name = './aaaa.html'
-    field = ['nombre', 'apellido', 'totalAcciones', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax']
-    template_name = './creacion_acc.html'
-    fields = '_all_'
+    template_name = './editar.html'
+    fields = ['nombre', 'apellido', 'totalAcciones', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax']
+    slug_field = 'run'
+    slug_url_kwarg = 'run'

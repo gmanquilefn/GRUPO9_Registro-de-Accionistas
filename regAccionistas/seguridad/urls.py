@@ -5,8 +5,8 @@ from seguridad import views
 
 urlpatterns = [
     url(r'^$',views.HomePageView.as_view(),name="index"),
-    url(r'^index/',views.HomePageView.as_view(),name="index"),
-    url(r'^accionista_form/',views.HomePageView2.as_view(),name="accionista_form"),
-    url(r'^aaaa/',views.CreateAccionista.as_view(success_url="/index/"),name="aaaa"),
+    url(r'^accionistas/',views.AccionistasView.as_view(),name="accionistas"),
+    url(r'^crear/',views.CreateAccionista.as_view(success_url="/accionistas/"),name="crear"),
+    url(r'^editar/',views.UpdateAccionista.as_view(success_url="/accionistas/"),name="editar"),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

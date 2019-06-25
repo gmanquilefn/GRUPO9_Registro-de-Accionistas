@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="ml-5 mr-5 mt-5 mb-5">
+    <h2>Listado de acionistas</h2>
+    <!--<a href="/buscar/" class="btn btn-primary">Buscar Accionista</a>-->
+    <a href="/crear/" class="btn btn-success">Crear Accionista</a>
+    <div class="container">
+      <div class="row mt-5 justify-content-center">
+        {% for accionista in accionistas %}
+          <div class="card" style="width: 80%;">
+            <div class="card-body">
+              <h5 class="card-title">{{ accionista.run }}</h5>
+              <p class="card-text">{{ accionista.nombre }}</p>
+              <a href="/editar/" class= "btn btn-secondary">Editar</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
