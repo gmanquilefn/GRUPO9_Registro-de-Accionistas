@@ -4,18 +4,16 @@
     <h1>Listado de accionistas</h1>
     <!--<a href="/buscar/" class="btn btn-primary">Buscar Accionista</a>-->
     <a href="/crear/" class="btn btn-success">Crear Accionista</a>
-    <div class="container">
-      <div class="row mt-5 justify-content-center">
-        {% for accionista in accionistas %}
-          <div class="card" style="width: 100%;">
+    <div class="row mt-5 justify-content-center">
+    {% for accionista in accionistas %}
+        <div class="card" style="width: 100%;">
             <div class="card-body">
-              <h3 class="card-title">{{ accionista.nombre }}</h3>
-              <p class="card-text">RUN: {{ accionista.run }}, Correo: {{ accionista.email }}</p>
-              <a href="/editar/" class= "btn btn-warning">Editar</a>
+                <h3 class="card-title">N° {{ accionista.id }} - {{ accionista.nombre }}</h3>
+                <p class="card-text">RUN: {{ accionista.run }}, Correo: {{ accionista.email }}</p>
+                <a href="{{ accionista.id }}/editar/" class= "btn btn-warning">Editar</a>
             </div>
-          </div>
-        {% endfor %}
-      </div>
+        </div>
+    {% endfor %}
     </div>
   </div>
 {% endblock %}
