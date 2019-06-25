@@ -10,8 +10,8 @@
             <div class="card-body">
                 <h3 class="card-title">N° {{ accionista.id }} - {{ accionista.nombre }}</h3>
                 <p class="card-text">RUN: {{ accionista.run }}, Correo: {{ accionista.email }}</p>
-                <a href="/{{ accionista.id }}/" class= "btn btn-secondary">Detalles</a>
-                <a href="/{{ accionista.id }}/editar/" class= "btn btn-warning">Editar</a>
+                <a href="/accionistas/{{ accionista.id }}/" class= "btn btn-secondary">Detalles</a>
+                <a href="/accionistas/{{ accionista.id }}/editar/" class= "btn btn-warning">Editar</a>
             </div>
         </div>
     {% endfor %}
