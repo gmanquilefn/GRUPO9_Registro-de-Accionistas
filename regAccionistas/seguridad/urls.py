@@ -7,7 +7,7 @@ urlpatterns = [
     url(r'^$',views.HomePageView.as_view(),name="index"),
     url(r'^accionistas/',views.AccionistasView.as_view(),name="accionistas"),
     url(r'^crear/',views.CreateAccionista.as_view(success_url="/accionistas/"),name="crear"),
-    url(r'^accionistas/(?P<pk>\d+)/editar/',views.UpdateAccionista.as_view(success_url='/accionistas/'),name='accionistas_editar'),
-    re_path(r'^accionistas/(?P<run>ICF[0-9]{3}/',views.DetalleAccionistaView.as_view(),name="detalle"),
+    url(r'^editar/(?P<id>)/editar/',views.UpdateAccionista.as_view(success_url='/accionistas/'),name='editar'),
+    url(r'^detalle/(?P<id>)/',views.DetalleAccionistaView.as_view(),name="detalle"),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
