@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<main class="page login-page">
+        <section class="clean-block clean-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Creación Accionista</h2>
+                    <p></p>
+                </div>
+                <form method="post">
+                    <div class="form-group">
+                            <label>RUN</label>
+                            <input class="form-control" id="run" name="run">
+                    </div>
+                    <div class="form-group">
+                        <label>Nombres</label>
+                        <input class="form-control" id="nombres" name="nombres">
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input class="form-control" id="apellidos" name="apellidos">
+                    </div>
+                    <div class="form-group">
+                        <label>Nacionalidad</label>
+                        <input class="form-control" id="nacionalidad" name="nacionalidad">
+                    </div>
+                    <div class="form-group">
+                        <label>Dirección</label>
+                        <input class="form-control" id="direccion" name="direccion">
+                    </div>
+                    <div class="form-group">
+                        <label>Número Telefónico</label>
+                        <input class="form-control" id="numtel" name="numtel">
+                    </div>
+                    <div class="form-group">
+                            <label>Número Fax</label>
+                            <input class="form-control" id="fax" name="fax">
+                        </div>
+                    <div class="form-group">
+                        <label>Correo Electrónico</label>
+                        <input class="form-control" id="email" name="email" type="email">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Crear</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+{% endblock %}
