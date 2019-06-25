@@ -1,9 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="jumbotron">
-    <h2 class="display-4">{{ accionista.run }}</h2>
-    <p class="lead">{{ accionista.nombre }}</p>
-    <hr class="my-4">
+<div class="row">
+    <div class="card-body">
+        <h3 class="card-title">{{ accionista.nombre }} {{ accionista.apellido }}</h3>
+        <p class="card-text">
+            RUN: {{ accionista.run }}
+            Total de acciones: {{ accionista.totalAcciones }}
+            Nacionalidad: {{ accionista.nacionalidad }}
+            Dirección: {{ accionista.direccion }}
+            Telefono: {{ accionista.telefono }}
+            Email: {{ accionista.email }}
+            Fax: {{ accionista.fax }}
+        </p>
+        <a href="/accionistas/{{ accionista.id }}/editar/" class= "btn btn-warning btn-lg">Editar</a>    
+    </div>
     <p>{{ accionista.totalAcciones }} Acciones</p>
-    <a class="btn btn-primary btn-lg" href="/accionistas/{{ curso.run }}/editar" role="button">Editar</a>
 </div>
