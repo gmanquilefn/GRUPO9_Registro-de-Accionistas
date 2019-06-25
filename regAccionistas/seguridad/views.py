@@ -25,5 +25,6 @@ class UpdateAccionista(LoginRequiredMixin, UpdateView):
 
 class DetalleAccionistaView(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
-        id=kwargs["id"]
+        id=kwargs["pk"]
+        print(id)
         return render(request, 'accionista.html', {'accionista' : Accionista.accionistas.get(id=id)})
