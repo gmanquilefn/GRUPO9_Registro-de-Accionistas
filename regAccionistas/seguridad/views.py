@@ -25,4 +25,3 @@ class CreateAccionista(CreateView):
     model = Accionista
     template_name = './creacion_acc.html'
     fields = '_all_'
-
