@@ -11,18 +11,19 @@ class HomePageView(LoginRequiredMixin, TemplateView):
 
 class DetalleAccionistaView(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
-        run=kwargs["run"]
-        return render(request, 'accionista.html', {'accionista' : Accionista.accionistas.get(run=run)})
+        id=kwargs["id"]
+        return render(request, 'accionista.html', {'accionista' : Accionista.accionistas.get(id=id)})
+
 class AccionistasView(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'accionistas.html', {'accionistas' : Accionista.accionistas.all()})
 
-class CreateAccionista(CreateView):
+class CreateAccionista(LoginRequiredMixin, CreateView):
     model = Accionista
     template_name = './crear.html'
     fields = '__all__'
 
-class UpdateAccionista(UpdateView):
+class UpdateAccionista(LoginRequiredMixin, UpdateView):
     model = Accionista
     template_name = './editar.html'
     fields = ['nombre', 'apellido', 'totalAcciones', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax']
