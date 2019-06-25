@@ -9,6 +9,10 @@ class HomePageView(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'index.html', context=None)
 
+class DetalleAccionistaView(LoginRequiredMixin, TemplateView):
+    def get(self, request, **kwargs):
+        run=kwargs["run"]
+        return render(request, 'accionista.html', {'accionista' : Accionista.accionistas.get(run=run)})
 class AccionistasView(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'accionistas.html', {'accionistas' : Accionista.accionistas.all()})
@@ -22,5 +26,3 @@ class UpdateAccionista(UpdateView):
     model = Accionista
     template_name = './editar.html'
     fields = ['nombre', 'apellido', 'totalAcciones', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax']
-    slug_field = 'run'
-    slug_url_kwarg = 'run'
