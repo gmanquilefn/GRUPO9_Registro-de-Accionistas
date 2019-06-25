@@ -11,7 +11,7 @@ class HomePageView(LoginRequiredMixin, TemplateView):
 
 class AccionistasView(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
-        return render(request, 'accionistas.html', context=None)
+        return render(request, 'accionistas.html', {'accionistas' : Accionista.accionistas.all()})
 
 class CreateAccionista(CreateView):
     model = Accionista
