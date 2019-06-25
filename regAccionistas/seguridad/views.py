@@ -23,11 +23,11 @@ class HomePageView3(LoginRequiredMixin, TemplateView):
 class CreateAccionista(CreateView):
     model = Accionista
     template_name = './aaaa.html'
-    fields = '__all__'
-
+    fields = ['run', 'nombre', 'apellido', 'totalAcciones', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax']
+    
 class UpdateAccionista(UpdateView):
     model = Accionista
     template_name = './aaaa.html'
-    field = ['nombre', 'apellido', 'totalAcciones', 'nacionalidad', 'direccion', 'fecha_Nacimiento', 'telefono', 'email', 'fax']
+    field = ['nombre', 'apellido', 'totalAcciones', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax']
     template_name = './creacion_acc.html'
     fields = '_all_'
