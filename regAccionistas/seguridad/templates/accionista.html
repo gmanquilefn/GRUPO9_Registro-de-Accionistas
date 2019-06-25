@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron">
+    <h2 class="display-4">{{ accionista.run }}</h2>
+    <p class="lead">{{ accionista.nombre }}</p>
+    <hr class="my-4">
+    <p>{{ accionista.totalAcciones }} Acciones</p>
+    <a class="btn btn-primary btn-lg" href="/accionistas/{{ curso.run }}/editar" role="button">Editar</a>
+</div>
