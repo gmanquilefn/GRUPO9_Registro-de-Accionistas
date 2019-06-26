@@ -6,8 +6,10 @@ Proyecto grupal de los ramos Ingeniería de Software I y Ingeniería de Software
 
 * IR A regAccionistas PARA ENCONTRAR manage.py
 
+* EJECUTAR MIGRACIONES CON python manage.py makemigrations
+
 * MIGRAR BASE DE DATOS UTILIZANDO python manage.py migrate
 
-* CREAR SUPERUSUARIO UTILIZANDO python manage.py createsuperuser
+* CREAR SUPER USUARIO UTILIZANDO python manage.py createsuperuser
 
 * LEVANTAR SERVIDOR EJECUTANDO python manage.py runserver
