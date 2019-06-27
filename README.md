@@ -1,13 +1,38 @@
-Proyecto grupal de los ramos Ingeniería de Software I y Ingeniería de Software II de la Universidad Andrés Bello.
+# Administrador de Registros de Accionistas
 
-# INSTRUCCIONES ENTREGA 24/06/2019
+Proyecto universitario en Django.
 
-* CLONAR REPOSITORIO
+![](https://i.imgur.com/FnBMhZZ.jpg?1)
 
-* IR A regAccionistas PARA ENCONTRAR manage.py
+## Dependencies
+Create _**requirements.txt**_ inside regAccionistas folder and put the text below
+```text
+django
+djangorestframework
+gunicorn
+```
 
-* MIGRAR BASE DE DATOS UTILIZANDO python manage.py migrate
+## Usage
+Installation:
+```shell
+pip3 install -r requirements.txt
+pip3 install virtualenv
+virtualenv venv
+cd venv/Scripts/
+activate.bat
+```
 
-* CREAR SUPERUSUARIO UTILIZANDO python manage.py createsuperuser
+Run:
+```python
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+```
 
-* LEVANTAR SERVIDOR EJECUTANDO python manage.py runserver
+## Authors
+[Pedro Conejera](https://github.com/PedroConejera) | 2019
+[Gonzalo Manquilef](https://github.com/Noygan) | 2019
+[Ronaldo Cavero](https://github.com/jcvron) | 2019
+[Francisco Vargas](https://github.com/Tostin) | 2019
+[Agustín Sepúlveda](https://github.com/Dreeakonee) | 2019
