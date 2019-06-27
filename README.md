@@ -1,8 +1,6 @@
 # Administrador de Registros de Accionistas
 
-Proyecto universitario en Django.
-
-![](https://i.imgur.com/FnBMhZZ.jpg?1)
+Proyecto universitario llevado a cabo en Django.
 
 ## Dependencies
 Create _**requirements.txt**_ inside regAccionistas folder and put the text below
@@ -31,8 +29,8 @@ python manage.py runserver
 ```
 
 ## Authors
-[Pedro Conejera](https://github.com/PedroConejera) | 2019
-[Gonzalo Manquilef](https://github.com/Noygan) | 2019
-[Ronaldo Cavero](https://github.com/jcvron) | 2019
-[Francisco Vargas](https://github.com/Tostin) | 2019
-[Agustín Sepúlveda](https://github.com/Dreeakonee) | 2019
+* **Pedro Conejera** - *2019* - [PedroConejera](https://github.com/PedroConejera)
+* **Gonzalo Manquilef** - *2019* - [Noygan](https://github.com/Noygan)
+* **Ronaldo Cavero** - *2019* - [Jcvron](https://github.com/jcvron)
+* **Francisco Vargas** - *2019* - [Tostin](https://github.com/Tostin)
+* **Agustín Sepúlveda** - *2019* - [Dreeakonee](https://github.com/Dreeakonee)
