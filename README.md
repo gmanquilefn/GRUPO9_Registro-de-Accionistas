@@ -1,5 +1,4 @@
 # Administrador de Registros de Accionistas
-
 Proyecto universitario llevado a cabo en Django.
 
 ## Dependencies
