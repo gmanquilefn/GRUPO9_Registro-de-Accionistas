@@ -2,7 +2,7 @@
 Proyecto universitario llevado a cabo en Django.
 
 ## Dependencies
-Create _**requirements.txt**_ inside regAccionistas folder and put the text below
+Create  _**requirements.txt**_ and put in the text below
 ```text
 django
 djangorestframework
