@@ -33,3 +33,4 @@ python manage.py runserver
 * **Ronaldo Cavero** - *2019* - [Jcvron](https://github.com/jcvron)
 * **Francisco Vargas** - *2019* - [Tostin](https://github.com/Tostin)
 * **Agustín Sepúlveda** - *2019* - [Dreeakonee](https://github.com/Dreeakonee)
+* **Oscar Edding** - *2019* - ...
