@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<main class="page landing-page">
+  <section class="clean-block clean-hero" style="background-image:url(&quot;static/assets/img/indexbg.jpg&quot;);color:rgba(9, 162, 255, 0.85);">
+    <div class="text">
+      <h2>Bienvenido {{ user.username }}!</h2>
+    </div>
+  </section>
+</main>
+{% endblock %}
