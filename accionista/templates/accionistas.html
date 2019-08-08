@@ -8,7 +8,7 @@
   {% for accionista in accionistas %}
     <div class="card" style="width: 100%;">
       <div class="card-body">
-        <h3 class="card-title">N° {{ accionista.id }} - {{ accionista.nombre }}</h3>
+        <h3 class="card-title">N° {{ accionista.id }} - {{ accionista.nombres }} {{ accionista.apellidos }}</h3>
         <p class="card-text">RUN: {{ accionista.run }}, Correo: {{ accionista.email }}</p>
         <a href="/accionistas/{{ accionista.id }}/" class= "btn btn-dark">Detalles</a>
         <a href="/accionistas/{{ accionista.id }}/editar/" class= "btn btn btn-outline-warning">Editar</a> 
