@@ -1,0 +1,4 @@
+djangorestframework
+gunicorn
+django>=2.1
+psycopg2
