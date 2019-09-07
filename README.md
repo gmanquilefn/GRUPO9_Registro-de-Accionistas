@@ -2,29 +2,24 @@
 Proyecto universitario llevado a cabo en Django.
 
 ## Dependencies
-Create  _**requirements.txt**_ and put in the text below
 ```text
 django
 djangorestframework
 gunicorn
+psycopg2
 ```
 
 ## Usage
-Installation:
-```shell
-pip3 install -r requirements.txt
-pip3 install virtualenv
-virtualenv venv
-cd venv/Scripts/
-activate.bat
+Prerequisites:
+```text
+Docker and docker-compose needed
 ```
 
 Run:
-```python
-python manage.py makemigrations
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
+```docker-compose
+docker-compose run web python manage.py migrate
+docker-compose run web python manage.py createsuperuser
+docker-compose up
 ```
 
 ## Authors
@@ -33,4 +28,4 @@ python manage.py runserver
 * **Ronaldo Cavero** - *2019* - [Jcvron](https://github.com/jcvron)
 * **Francisco Vargas** - *2019* - [Tostin](https://github.com/Tostin)
 * **Agustín Sepúlveda** - *2019* - [Dreeakonee](https://github.com/Dreeakonee)
-* **Oscar Edding** - *2019* - ...
+* **Oscar Edding** - *2019* - [OscarEdding](https://github.com/OscarEdding)
