@@ -1,5 +1,6 @@
 # Administrador de Registros de Accionistas
 Proyecto universitario llevado a cabo en Django.
+Trello: https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas
 
 ## Dependencies
 ```text
