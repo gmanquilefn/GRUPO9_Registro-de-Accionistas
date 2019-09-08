@@ -1,23 +1,30 @@
 # Administrador de Registros de Accionistas
-Proyecto universitario llevado a cabo en Django.
-Trello: https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas
+Proyecto universitario llevado a cabo en Django. 
+[Tablero del Proyecto en Trello](https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas)
 
 ## Dependencies
+Create _**requirements.txt**_ and put in it the text below
+**Docker and Docker-compose needed**
 ```text
-django
+django>=2.1
 djangorestframework
 gunicorn
 psycopg2
 ```
 
 ## Usage
-Prerequisites:
-```text
-Docker and docker-compose needed
+Installation (for local tests): 
+```shell
+pip3 install -r requirements.txt
+pip3 install virtualenv
+virtualenv venv
+cd venv/Scripts/
+activate.bat
 ```
 
 Run:
 ```docker-compose
+docker-compose run web python manage.py makemigrations
 docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
 docker-compose up
