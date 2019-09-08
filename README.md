@@ -4,7 +4,7 @@ Proyecto universitario llevado a cabo en Django.
 
 ## Dependencies
 Create _**requirements.txt**_ and put in it the text below
-**Docker and Docker-compose needed**
+* **Docker and Docker-compose needed**
 ```text
 django>=2.1
 djangorestframework
@@ -13,15 +13,6 @@ psycopg2
 ```
 
 ## Usage
-Installation (for local tests): 
-```shell
-pip3 install -r requirements.txt
-pip3 install virtualenv
-virtualenv venv
-cd venv/Scripts/
-activate.bat
-```
-
 Run:
 ```docker-compose
 docker-compose run web python manage.py makemigrations
