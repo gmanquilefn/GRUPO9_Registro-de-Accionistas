@@ -3,15 +3,12 @@ Proyecto universitario llevado a cabo en Django.
 [Tablero del Proyecto en Trello](https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas)
 
 ## Dependencies
-Create _**requirements.txt**_ and put in it the text below
-```text
-django>=2.1
-djangorestframework
-gunicorn
-psycopg2
-```
 * **Docker and Docker-compose needed**
 
+* Use _**requirements.txt**_ with:
+```text
+pip3 install -r requirements.txt
+```
 ## Usage
 Run:
 ```docker-compose
