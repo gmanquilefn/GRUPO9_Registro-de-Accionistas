@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1 align="center">Busqueda de Accionistas</h1>
+<div class="container" style="width: 20rem;">
+    <div class="row">
+      <div class="col-md-12 search">
+        <form action="" method="get">
+          <div id="custom-search-input">
+            <div class="input-group col-md-12">
+              <input type="text" class="form-control" placeholder="Buscar..." name="Buscar">
+              <span class="input-group-list">
+                <i class="icon icon-search"></i>
+                <button type="submit" class="boton btn-success">Buscar</button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -6,3 +6,7 @@ from django.views.generic.edit import CreateView, UpdateView
 class HomePageView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
     return render(request, 'index.html', context=None)
+
+class BusquedaView(LoginRequiredMixin, UpdateView):
+  def get(self, request, **kwargs):
+    return render(request, 'busqueda.html', context=None)
