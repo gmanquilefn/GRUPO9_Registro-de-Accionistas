@@ -4,13 +4,13 @@ Proyecto universitario llevado a cabo en Django.
 
 ## Dependencies
 Create _**requirements.txt**_ and put in it the text below
-* **Docker and Docker-compose needed**
 ```text
 django>=2.1
 djangorestframework
 gunicorn
 psycopg2
 ```
+* **Docker and Docker-compose needed**
 
 ## Usage
 Run:
