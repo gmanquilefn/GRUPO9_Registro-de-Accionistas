@@ -5,6 +5,9 @@ Proyecto universitario llevado a cabo en Django.
 ## Dependencies
 * Needs an Unix distro to run
 * **Docker and Docker-compose needed**
+```docker-compose
+sudo apt install docker-compose
+```
 
 ## Usage
 Run:
