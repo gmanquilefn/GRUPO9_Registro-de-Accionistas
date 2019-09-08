@@ -16,7 +16,7 @@ INSTALLED_APPS = [
   'django.contrib.staticfiles',
   'seguridad',
   'accounts',
-  'accionista'
+  'accionista',
 ]
 
 MIDDLEWARE = [

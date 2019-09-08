@@ -4,5 +4,6 @@ from seguridad import views
 
 urlpatterns = [
   url(r'^$',views.HomePageView.as_view(),name="index"),
+  url(r'^busqueda/$',views.BusquedaView.as_view(),name="Buscar"),
   path('accounts/', include('django.contrib.auth.urls')),
 ]
