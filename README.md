@@ -9,7 +9,6 @@ Proyecto universitario llevado a cabo en Django.
 ## Usage
 Run:
 ```docker-compose
-docker-compose run web python manage.py makemigrations
 docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
 docker-compose up
