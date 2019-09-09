@@ -17,6 +17,7 @@ INSTALLED_APPS = [
   'seguridad',
   'accounts',
   'accionista',
+  'traspaso',
 ]
 
 MIDDLEWARE = [
