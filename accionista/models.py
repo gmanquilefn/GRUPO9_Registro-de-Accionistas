@@ -1,3 +1,4 @@
+
 from django.db import models
 
 class Accionista(models.Model):
@@ -11,3 +12,6 @@ class Accionista(models.Model):
   email = models.CharField(max_length=100, default='example@correo.com')
   fax = models.CharField(max_length=20, default='')
   accionistas = models.Manager()
+
+  def __str__ (self):
+    return self.nombres
