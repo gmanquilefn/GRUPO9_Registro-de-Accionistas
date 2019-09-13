@@ -2,14 +2,14 @@
 {% block content %}
 <div class="ml-5 mr-5 mt-5 mb-5">
   <h1>Listado de accionistas</h1>
-  <a href="/busqueda/" class="btn btn-primary">Busqueda</a>
+  <a href="/busqueda/" class="btn btn-primary">Búsqueda</a>
   <a href="/crear/" class="btn btn-success">Crear Accionista</a>
   <div class="row mt-5 justify-content-center">
   {% for accionista in accionistas %}
     <div class="card" style="width: 100%;">
       <div class="card-body">
-        <h3 class="card-title">N° {{ accionista.id }} - {{ accionista.nombres }} {{ accionista.apellidos }}</h3>
-        <p class="card-text">RUN: {{ accionista.run }}, Correo: {{ accionista.email }}</p>
+        <h3 class="card-title">RUN: {{ accionista.run }} - {{ accionista.nombres }} {{ accionista.apellidos }}</h3>
+        <p class="card-text">Correo: {{ accionista.email }}</p>
         <a href="/accionistas/{{ accionista.id }}/" class= "btn btn-dark">Detalles</a>
         <a href="/accionistas/{{ accionista.id }}/editar/" class= "btn btn btn-outline-warning">Editar</a> 
       </div>
