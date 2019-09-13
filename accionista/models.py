@@ -11,6 +11,7 @@ class Accionista(models.Model):
   telefono = models.CharField(max_length=20, default='')
   email = models.CharField(max_length=100, default='example@correo.com')
   fax = models.CharField(max_length=20, default='')
+  imagen = models.FileField(upload_to="accionistas", null=True)
   accionistas = models.Manager()
 
   def __str__ (self):
