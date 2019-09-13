@@ -2,7 +2,7 @@
 from django.db import models
 
 class Accionista(models.Model):
-  run = models.CharField(max_length=20)
+  run = models.CharField(max_length=20, on_delete=models.SET_NULL)
   nombres = models.CharField(max_length=100, default='')
   apellidos = models.CharField(max_length=100, default='')
   totalAcciones = models.IntegerField(default=0)

@@ -18,6 +18,7 @@ INSTALLED_APPS = [
   'accounts',
   'accionista',
   'traspaso',
+  'terceros',
 ]
 
 MIDDLEWARE = [
