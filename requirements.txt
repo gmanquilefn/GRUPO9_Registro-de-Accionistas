@@ -1,3 +1,4 @@
+pillow
 django>=2.1
 djangorestframework
 gunicorn

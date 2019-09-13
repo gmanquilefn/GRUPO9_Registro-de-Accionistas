@@ -20,4 +20,20 @@
       </div>
     </div>
   </div>
+  <div class="row mt-5 justify-content-center">
+  {% if accioni %}
+  {% for accionista in accioni %}
+    <div class="card" style="width: 100%;">
+      <div class="card-body">
+        <h3 class="card-title">N° {{ accionista.id }} - {{ accionista.nombres }} {{ accionista.apellidos }}</h3>
+        <p class="card-text">RUN: {{ accionista.run }}, Correo: {{ accionista.email }}</p>
+        <a href="/accionistas/{{ accionista.id }}/" class= "btn btn-dark">Detalles</a>
+        <a href="/accionistas/{{ accionista.id }}/editar/" class= "btn btn btn-outline-warning">Editar</a> 
+      </div>
+    </div>
+  {% endfor %}
+  {% else %}
+    <h1> No existen Accionistas registrados!</h1>
+  {% endif %}
+  </div>
 {% endblock %}
