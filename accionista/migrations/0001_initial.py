@@ -28,4 +28,19 @@ class Migration(migrations.Migration):
         ('accionistas', django.db.models.manager.Manager()),
       ],
     ),
+    operations = [
+      migrations.CreateModel(
+        name='Tercero',
+
+        fields=[
+          ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+          ('nombres', models.CharField(default='', max_length=100)),
+          ('apellidos', models.CharField(default='', max_length=100)),
+        ],
+
+        managers=[
+          ('terceros', django.db.models.manager.Manager()),
+        ],
+      ),
+    ]
   ]

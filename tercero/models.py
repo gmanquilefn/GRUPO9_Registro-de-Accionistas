@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 class Tercero(models.Model):
   accionista_id = models.ForeignKey('accionista.id', on_delete=models.CASCADE)
