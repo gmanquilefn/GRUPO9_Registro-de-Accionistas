@@ -3,6 +3,8 @@ Proyecto universitario llevado a cabo en Django.
 
 [Tablero del Proyecto en Trello >>](https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas)
 
+[Live Demo >>]()
+
 ## Dependencies
 * Needs an Unix distro to run
 * **Docker and Docker-compose needed**
@@ -13,9 +15,16 @@ sudo apt install docker-compose
 ## Usage
 Run:
 ```docker-compose
+docker-compose run web python manage.py makemigrations
 docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
 docker-compose up
+```
+
+Reset db:
+```docker-compose
+docker-compose stop
+docker rm grupo9registrodeaccionistas_db_1
 ```
 
 ## Authors
