@@ -30,5 +30,5 @@ class DetalleTerceroView(TemplateView):
   def get(self, request, **kwargs):
     id=kwargs["pk"]
     print(id)
-    return render(request, 'tercero.html', {'tercero' : tercero.terceros.get(id=id)})
+    return render(request, 'tercero.html', {'tercero' : Tercero.terceros.get(id=id)})
 
