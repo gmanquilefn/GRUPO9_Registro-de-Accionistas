@@ -20,12 +20,12 @@ class AccionistasView(LoginRequiredMixin, TemplateView):
 class CreateAccionista(LoginRequiredMixin, CreateView):
   model = Accionista
   template_name = './crear.html'
-  fields = '__all__'
+  fields = ['run', 'nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'imagen']
 
 class UpdateAccionista(LoginRequiredMixin, UpdateView):
   model = Accionista
   template_name = './editar.html'
-  fields = ['nombres', 'apellidos', 'totalAcciones', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax']
+  fields = ['nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'imagen']
 
 class DetalleAccionistaView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
