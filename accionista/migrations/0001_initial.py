@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             name='Accionista',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('run', models.CharField(max_length=20)),
+                ('run', models.CharField(max_length=20, null=False)),
                 ('nombres', models.CharField(default='', max_length=100)),
                 ('apellidos', models.CharField(default='', max_length=100)),
                 ('totalAcciones', models.IntegerField(default=0)),
@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('telefono', models.CharField(default='', max_length=20)),
                 ('email', models.CharField(default='example@correo.com', max_length=100)),
                 ('fax', models.CharField(default='', max_length=20)),
-                ('imagen', models.FileField(null=True, upload_to='accionistas')),
+                ('imagen', models.FileField(null=False, upload_to='accionistas')),
                 ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
                 ('updated_at', models.DateTimeField(blank=True, null=True)),
             ],

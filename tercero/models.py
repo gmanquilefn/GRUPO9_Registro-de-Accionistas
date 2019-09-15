@@ -3,9 +3,9 @@ from django.utils import timezone
 from accionista.models import Accionista
 
 class Tercero(models.Model):
-  accionista_id = models.ForeignKey(Accionista, on_delete=models.CASCADE, null=True, blank=True)
-  nombres = models.CharField(max_length=100, default='')
-  apellidos = models.CharField(max_length=100, default='')
+  accionista_id = models.ForeignKey(Accionista, on_delete=models.CASCADE, null=False, blank=False)
+  nombres = models.CharField(max_length=100, null=False)
+  apellidos = models.CharField(max_length=100, null=False)
   rol = models.CharField(max_length=200)
   detalle = models.TextField()
   created_at = models.DateTimeField(default=timezone.now)
