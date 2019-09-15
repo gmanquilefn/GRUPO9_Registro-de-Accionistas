@@ -8,9 +8,9 @@ from django.db.models import Q
 class TercerosView(TemplateView):
   def get(self, request, **kwargs):
     queryset = request.GET.get("Buscar")
-    terceros = tercero.terceros.all()
+    terceros = Tercero.terceros.all()
     if queryset:
-      terceros = tercero.terceros.filter(
+      terceros = Tercero.terceros.filter(
         Q( nombres__icontains = queryset) |
         Q( apellidos__icontains = queryset)
       ).distinct()
