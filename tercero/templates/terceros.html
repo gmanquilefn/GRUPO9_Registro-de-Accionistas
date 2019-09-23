@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="mainto">
-  <h1 class="main city">Accionistas</h1> 
+  <h1 class="main city">Terceros</h1> 
   <div class="container" style="width: 50rem; margin-top: 3rem;" >
       <div class="row">
         <div class="col-md-12 search">
@@ -12,7 +12,7 @@
                 <span class="input-group-list">
                   <i class="icon icon-search"></i>
                   <button type="submit" class="btn btn-success" style="width: 8rem; height: 3rem;">Buscar</button>
-                  <a href="/accionistas/crear/" class="btn btn-success" style="width: 10rem; height: 3rem; border-color: dodgerblue; background-color: dodgerblue;">Crear Accionista</a>
+                  <a href="/terceros/crear/" class="btn btn-success" style="width: 10rem; height: 3rem; border-color: dodgerblue; background-color: dodgerblue;">Crear Tercero</a>
                 </span>
               </div>
             </div>
@@ -21,19 +21,18 @@
       </div>
     </div>
   <div class="row mt-5 justify-content-center">
-  {% if accionistas %}
-  {% for accionista in accionistas %}
+  {% if terceros %}
+  {% for tercero in terceros %}
     <div class="card" style="width: 100%;">
       <div class="card-body">
-        <h3 class="card-title">RUN: {{ accionista.run }} - {{ accionista.nombres }} {{ accionista.apellidos }}</h3>
-        <p class="card-text">Correo: {{ accionista.email }}</p>
-        <a href="/accionistas/{{ accionista.id }}/" class= "btn btn-dark">Detalles</a>
-        <a href="/accionistas/{{ accionista.id }}/editar/" class= "btn btn btn-outline-warning">Editar</a> 
+        <h3 class="card-title">Id accionista asociado: {{ tercero.accionista_id }} - {{ tercero.nombres }} {{ tercero.apellidos }}</h3>
+        <a href="/terceros/{{ tercero.id }}/" class= "btn btn-dark">Detalles</a>
+        <a href="/terceros/{{ tercero.id }}/editar/" class= "btn btn btn-outline-warning">Editar</a> 
       </div>
     </div>
   {% endfor %}
   {% else %}
-    <h1> No existen Accionistas registrados!</h1>
+    <h1> No existen Terceros registrados!</h1>
   {% endif %}
   </div>
 </div>

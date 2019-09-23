@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-3">
+  <h3>Detalles del tercero</h3>
+  <a href="/terceros/{{ tercero.id }}/editar/" class= "btn btn-outline-warning mb-2">Editar</a>
+  <a href="/terceros/" class= "btn  btn-secondary mb-2">Volver</a>
+  <table class="table">
+    <tbody>
+      <tr>
+        <th scope="row">N°</th>
+        <td>{{ tercero.accionista_id }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Nombres</th>
+        <td>{{ tercero.nombres }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Apellidos</th>
+        <td>{{ tercero.apellidos }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

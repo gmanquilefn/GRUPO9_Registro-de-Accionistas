@@ -1,4 +1,3 @@
-
 from django.db import models
 from django.utils import timezone
 
@@ -12,7 +11,14 @@ class Accionista(models.Model):
   telefono = models.CharField(max_length=20, default='')
   email = models.CharField(max_length=100, default='example@correo.com')
   fax = models.CharField(max_length=20, null=True)
+  imagen = models.FileField(upload_to="accionistas", blank=True, null=True)
+  created_at = models.DateTimeField(default=timezone.now)
+  updated_at = models.DateTimeField(blank=True, null=True)
   accionistas = models.Manager()
+
+  def update(self):
+    self.updated_at = timezone.now()
+    self.save()
 
   def __str__ (self):
     return self.nombres

@@ -1,26 +1,30 @@
 # Administrador de Registros de Accionistas
 Proyecto universitario llevado a cabo en Django.
-Trello: https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas
+
+[Tablero del Proyecto en Trello >>](https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas)
+
+[Live Demo >>]()
 
 ## Dependencies
-```text
-django
-djangorestframework
-gunicorn
-psycopg2
+* Needs an Unix distro to run
+* **Docker and Docker-compose needed**
+```docker-compose
+sudo apt install docker-compose
 ```
 
 ## Usage
-Prerequisites:
-```text
-Docker and docker-compose needed
-```
-
 Run:
 ```docker-compose
+docker-compose run web python manage.py makemigrations
 docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
 docker-compose up
+```
+
+Reset db:
+```docker-compose
+docker-compose stop
+docker rm grupo9registrodeaccionistas_db_1
 ```
 
 ## Authors
