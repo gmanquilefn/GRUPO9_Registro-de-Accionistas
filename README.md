@@ -8,6 +8,7 @@ Proyecto universitario llevado a cabo en Django.
 * **Docker and Docker-compose needed**
 ```Docker
 https://docs.docker.com/install/
+```
 ```Docker-compose
 https://docs.docker.com/compose/install/
 ```
@@ -29,7 +30,7 @@ docker rm grupo9registrodeaccionistas_db_1
 
 ## Authors
 * **Pedro Conejera** - *2019* - [PedroConejera](https://github.com/PedroConejera)
-* **Gonzalo Manquilef** - *2019* - [Noygan](https://github.com/GonzaloManquilef)
+* **Gonzalo Manquilef** - *2019* - [GonzaloManquilef](https://github.com/GonzaloManquilef)
 * **Ronaldo Cavero** - *2019* - [Jcvron](https://github.com/jcvron)
 * **Francisco Vargas** - *2019* - [Tostin](https://github.com/Tostin)
 * **Agustín Sepúlveda** - *2019* - [Dreeakonee](https://github.com/Dreeakonee)
