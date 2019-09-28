@@ -7,15 +7,16 @@ Proyecto universitario llevado a cabo en Django.
 * Needs an Unix distro to run
 * **Docker and Docker-compose needed**
 ```Docker
-https://docs.docker.com/install/
+(https://docs.docker.com/install/)
 ```
 ```Docker-compose
-https://docs.docker.com/compose/install/
+(https://docs.docker.com/compose/install/)
 ```
 
 ## Usage
 Run:
 ```docker-compose
+docker-compose up
 docker-compose run web python manage.py makemigrations
 docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
