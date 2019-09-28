@@ -7,10 +7,10 @@ Proyecto universitario llevado a cabo en Django.
 * Needs an Unix distro to run
 * **Docker and Docker-compose needed**
 ```Docker
-(https://docs.docker.com/install/)
+https://docs.docker.com/install/
 ```
 ```Docker-compose
-(https://docs.docker.com/compose/install/)
+https://docs.docker.com/compose/install/
 ```
 
 ## Usage
