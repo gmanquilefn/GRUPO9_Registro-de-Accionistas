@@ -3,13 +3,13 @@ Proyecto universitario llevado a cabo en Django.
 
 [Tablero del Proyecto en Trello >>](https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas)
 
-[Live Demo >>]()
-
 ## Dependencies
 * Needs an Unix distro to run
 * **Docker and Docker-compose needed**
-```docker-compose
-sudo apt install docker-compose
+```Docker
+https://docs.docker.com/install/
+```Docker-compose
+https://docs.docker.com/compose/install/
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ docker rm grupo9registrodeaccionistas_db_1
 
 ## Authors
 * **Pedro Conejera** - *2019* - [PedroConejera](https://github.com/PedroConejera)
-* **Gonzalo Manquilef** - *2019* - [Noygan](https://github.com/Noygan)
+* **Gonzalo Manquilef** - *2019* - [Noygan](https://github.com/GonzaloManquilef)
 * **Ronaldo Cavero** - *2019* - [Jcvron](https://github.com/jcvron)
 * **Francisco Vargas** - *2019* - [Tostin](https://github.com/Tostin)
 * **Agustín Sepúlveda** - *2019* - [Dreeakonee](https://github.com/Dreeakonee)
