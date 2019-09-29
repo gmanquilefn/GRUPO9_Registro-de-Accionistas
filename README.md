@@ -15,7 +15,7 @@ https://docs.docker.com/compose/install/
 ## Usage
 Run:
 ```docker-compose
-docker-compose up
+docker-compose build
 docker-compose run web python manage.py makemigrations
 docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
