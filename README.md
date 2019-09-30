@@ -4,11 +4,7 @@ Proyecto universitario llevado a cabo en Django.
 [Tablero del Proyecto en Trello >>](https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas)
 
 ## Dependencies
-<<<<<<< HEAD
 Docker:
-=======
-* **Docker and Docker-compose needed**
->>>>>>> 636cb1cd65bdeea6a6edce2f14b26e25aae374e1
 ```Docker
 sudo apt install docker-compose
 ```
