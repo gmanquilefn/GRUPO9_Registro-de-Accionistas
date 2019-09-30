@@ -4,7 +4,11 @@ Proyecto universitario llevado a cabo en Django.
 [Tablero del Proyecto en Trello >>](https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas)
 
 ## Dependencies
+<<<<<<< HEAD
 Docker:
+=======
+* **Docker and Docker-compose needed**
+>>>>>>> 636cb1cd65bdeea6a6edce2f14b26e25aae374e1
 ```Docker
 sudo apt install docker-compose
 ```
@@ -15,7 +19,7 @@ sudo apt install docker-compose
 ## Usage
 Run:
 ```docker-compose
-docker-compose up
+docker-compose build
 docker-compose run web python manage.py makemigrations
 docker-compose run web python manage.py migrate
 docker-compose run web python manage.py createsuperuser
