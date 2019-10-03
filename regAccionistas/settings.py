@@ -1,6 +1,7 @@
 import os
 import django_heroku
 import psycopg2
+import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -67,6 +68,7 @@ WSGI_APPLICATION = 'regAccionistas.wsgi.application'
 if "DATABASE_URL" in os.environ:
   DATABASE_URL = os.environ['DATABASE_URL']
   conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+  DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 DATABASES = {
   'default': {
@@ -105,6 +107,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 django_heroku.settings(locals())
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
-
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
