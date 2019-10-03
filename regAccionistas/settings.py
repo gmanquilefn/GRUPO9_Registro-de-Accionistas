@@ -12,7 +12,7 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+  os.path.join(BASE_DIR, 'static'),
 )
 
 SECRET_KEY = '74p5_=yl_fv^na=h75b86$@snq=0%hrm&=+$esx^zxq+g39&gl'
