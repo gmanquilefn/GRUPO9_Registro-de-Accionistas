@@ -15,7 +15,8 @@ class AccionistasView(LoginRequiredMixin, TemplateView):
     if queryset:
       accionistas = Accionista.accionistas.filter(
         Q( nombres__icontains = queryset) |
-        Q( apellidos__icontains = queryset)
+        Q( apellidos__icontains = queryset) |
+        Q( run__icontains = queryset)
       ).distinct()
     return render(request, 'accionistas.html', {'accionistas' : accionistas})
 
