@@ -1,7 +1,7 @@
 # Administrador de Registros de Accionistas
 Proyecto universitario llevado a cabo en Django.
 
-[Demo en Heroku >>](https://registro-qa.herokuapp.com/)
+[Demo en Heroku >>](https://registro-accionistas.herokuapp.com/)
 
 [Tablero del Proyecto en Trello >>](https://trello.com/b/BP7z3o5H/grupo9registro-de-accionistas)
 
