@@ -1,0 +1,1 @@
+bin/start-pgbouncer-stunnel gunicorn regAccionistas.wsgi --log-file - 

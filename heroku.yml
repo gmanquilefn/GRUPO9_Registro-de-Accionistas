@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: bin/start-pgbouncer-stunnel gunicorn regAccionistas.wsgi --log-file - 
+  web: gunicorn regAccionistas.wsgi --log-file - 
