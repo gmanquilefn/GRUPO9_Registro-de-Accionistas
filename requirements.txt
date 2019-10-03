@@ -3,3 +3,4 @@ django>=2.1
 djangorestframework
 gunicorn
 psycopg2
+django-heroku

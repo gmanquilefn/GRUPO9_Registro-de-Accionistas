@@ -1,6 +1,18 @@
 import os
+import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.9/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
 SECRET_KEY = '74p5_=yl_fv^na=h75b86$@snq=0%hrm&=+$esx^zxq+g39&gl'
 DEBUG = True
 ALLOWED_HOSTS = ['*']
@@ -51,13 +63,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'regAccionistas.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db',
-        'PORT': 5432,
-    }
+  'default': {
+      'ENGINE': 'django.db.backends.postgresql',
+      'NAME': 'postgres',
+      'USER': 'postgres',
+      'HOST': 'db',
+      'PORT': 5432,
+      'CONN_MAX_AGE': 500,
+  }
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -80,6 +93,10 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'

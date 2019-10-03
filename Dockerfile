@@ -1,8 +1,9 @@
 FROM python:3
 
 ENV PYTHONUNBUFFERED 1
-RUN mkdir /django-docker
-WORKDIR /django-docker
-ADD requirements.txt /django-docker/
+RUN mkdir /regAccionistas
+WORKDIR /regAccionistas
+ADD requirements.txt /regAccionistas/
 RUN pip install -r requirements.txt
-ADD . /django-docker/
+
+ADD . /regAccionistas/
