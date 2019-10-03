@@ -1,4 +1,4 @@
-from models import Accionista
+from accionista.models import Accionista
 from django import forms
 
 class FormularioCrear(forms.ModelForm):
@@ -13,4 +13,4 @@ class FormularioCrear(forms.ModelForm):
             'direccion',
             'telefono',
             'email',
-            'accionistas']
+            'fax']

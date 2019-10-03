@@ -3,7 +3,7 @@ from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from accionista.models import Accionista
-from forms import FormularioCrear
+from accionista.forms import FormularioCrear
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
 

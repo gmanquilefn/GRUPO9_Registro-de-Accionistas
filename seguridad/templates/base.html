@@ -13,49 +13,6 @@
   </head>
   <style>
 
-    .navo {
-      background-color: rgb(245, 245, 245);
-      width: 100%;
-      height: 60px;
-    }
-
-    nav p{
-      float: left;
-      color: rgb(19, 18, 18);
-      padding: 0px 20px;
-      text-decoration: none;
-      font-size: 24px;
-      margin-top: 10px;
-      line-height: 30px;
-    }
-
-    nav ul{
-      float: left;
-    }
-
-    nav ul li{
-      float: left;
-      list-style: none;
-      position: relative;
-      text-decoration: none;
-    }
-
-    nav ul li a{
-      display: block;
-      float: left;
-      color: rgb(19, 18, 18);
-      text-align: center;
-      padding: 17px 14px;
-      text-decoration: none;
-      font-size: 17px;
-      margin-top: 0px;
-    }
-
-    nav ul li a:hover{
-      background-color: rgb(121, 118, 118);
-      text-decoration: none;
-      color: white;
-    }
   </style>
   <body>
       <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
@@ -73,20 +30,7 @@
               </div>
           </div>
       </nav>
-  <!--- 
-  <nav>
-    <p>Registro de Accionistas</p>
-    <ul>
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/accionistas/">Accionistas</a></li>
-      <li><a href="/terceros/">Terceros</a></li>
-      <li><a href="#">Traspasos</a></li>
-      <li><a href="#">Dividendos</a></li>
-      </li>
-      <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
-    </ul>
-  </nav>
-  --->
+
     {% block content %}
     {% endblock %}
     {% include "footer.html" %}
