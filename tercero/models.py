@@ -1,13 +1,13 @@
 from django.db import models
 from django.utils import timezone
-from accionista.models import Accionista
 
 class Tercero(models.Model):
-  accionista_id = models.ForeignKey(Accionista, on_delete=models.CASCADE, null=False, blank=False)
+  accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
+  acciones_id = models.ManyToManyField('accionista.Acciones', blank=True)
   nombres = models.CharField(max_length=100, null=False)
   apellidos = models.CharField(max_length=100, null=False)
   rol = models.CharField(max_length=200)
-  detalle = models.TextField()
+  poder = models.TextField()
   created_at = models.DateTimeField(default=timezone.now)
   updated_at = models.DateTimeField(blank=True, null=True)
   terceros = models.Manager()
