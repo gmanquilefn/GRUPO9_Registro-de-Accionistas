@@ -40,6 +40,13 @@ Proyecto universitario llevado a cabo en Django.
   docker-compose down
   ```
 
+>Delete images, containers, build cache and networks
+  ```Docker
+  docker rmi $(docker images -q)
+  docker rm $(docker ps -a -q)
+  docker system prune
+  ```
+
 ## Known Issues 📢
 1) To fix **"ERROR: for grupo9registrodeaccionistas_db_1  Cannot start service db: driver failed programming external connectivity on endpoint grupo9registrodeaccionistas_db_1 (8ca475d599099affea877a2b4e3cd19eaca4d31bd26120f8f85ea699b644fccd): Error starting userland proxy: listen tcp 0.0.0.0:5432: bind: address already in use"** :
     ```Fix
