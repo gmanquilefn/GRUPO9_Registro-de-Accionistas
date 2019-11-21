@@ -28,7 +28,7 @@ class UpdateTercero(UpdateView):
 
 class DetalleTerceroView(TemplateView):
   def get(self, request, **kwargs):
-    id=kwargs["pk"]
+    tercero_id=kwargs["pk"]
     print(id)
-    return render(request, 'tercero.html', {'tercero' : Tercero.terceros.get(id=id)})
+    return render(request, 'tercero.html', {'tercero' : Tercero.terceros.get(tercero_id=tercero_id)})
 

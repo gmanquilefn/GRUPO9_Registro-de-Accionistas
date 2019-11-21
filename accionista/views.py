@@ -31,9 +31,9 @@ class UpdateAccionista(LoginRequiredMixin, UpdateView):
 
 class DetalleAccionistaView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
-    id=kwargs["pk"]
+    accionista_id=kwargs["pk"]
     print(id)
-    return render(request, 'accionista.html', {'accionista' : Accionista.accionistas.get(id=id)})
+    return render(request, 'accionista.html', {'accionista' : Accionista.accionistas.get(accionista_id=accionista_id)})
 
 def FormularioVista(request):
   form = FormularioCrear(request.POST or None)

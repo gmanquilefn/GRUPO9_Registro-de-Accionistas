@@ -3,12 +3,14 @@ from django.utils import timezone
 from tercero.models import Tercero
 
 class Accionista(models.Model):
-  run = models.CharField(max_length=20)
-  nombres = models.CharField(max_length=100, default='')
-  apellidos = models.CharField(max_length=100, default='')
+  accionista_id = models.AutoField(primary_key=True)
+  run = models.CharField(max_length=20, unique=True, null=False, blank=False)
+  nombres = models.CharField(max_length=100, default='', null=False, blank=False)
+  apellidos = models.CharField(max_length=100, default='', null=False, blank=False)
+  acciones_id = models.ManyToManyField('accionista.Acciones', blank=False)
+  terceros_id = models.ManyToManyField('tercero.Tercero', blank=True)
   created_at = models.DateTimeField(default=timezone.now)
   updated_at = models.DateTimeField(blank=True, null=True)
-  acciones_id = models.ManyToManyField('accionista.Acciones', blank=False)
   accionistas = models.Manager()
 
   def update(self):
@@ -22,7 +24,7 @@ class Accionista(models.Model):
     if(self.end_date > self.start_date):"""
 
 class Datos_Accionista(models.Model):
-  run = models.ForeignKey(Accionista, on_delete=models.CASCADE, null=False, blank=False)
+  accionista_id = models.ForeignKey(Accionista, on_delete=models.CASCADE, null=False, blank=False)
   nacionalidad = models.CharField(max_length=20, default='')
   direccion = models.CharField(max_length=60, default='')
   telefono = models.CharField(max_length=20, default='')
@@ -31,10 +33,10 @@ class Datos_Accionista(models.Model):
   Firma = models.FileField(upload_to="accionistas", blank=True, null=True)
 
   def __str__ (self):
-    return self.run
+    return self.nacionalidad
 
 class Firmas_Accionista(models.Model):
-  run = models.ForeignKey(Accionista, on_delete=models.CASCADE, null=False, blank=False)
+  accionista_id = models.ForeignKey(Accionista, on_delete=models.CASCADE, null=False, blank=False)
   firma1 = models.ImageField(upload_to="accionistas", blank=True, null=True)
   firma2 = models.ImageField(upload_to="accionistas", blank=True, null=True)
   firma3 = models.ImageField(upload_to="accionistas", blank=True, null=True)
@@ -42,9 +44,20 @@ class Firmas_Accionista(models.Model):
   firma5 = models.ImageField(upload_to="accionistas", blank=True, null=True)
   
   def __str__(self):
-    return self.run
+    return self.firma1
+
+
+class Acciones(models.Model):
+  acciones_id = models.AutoField (primary_key=True)
+  accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
+  tercero_id = models.ManyToManyField('tercero.Tercero', blank=True)
+  rut_emisor = models.CharField(max_length=13,blank=False,null=False)
+  
+  def __str__(self):
+    return self.acciones_id
 
 class Datos_Acciones(models.Model):
+  acciones_id = models.ForeignKey(Acciones, on_delete=models.CASCADE, null=False, blank=False)
   codigo = models.CharField(max_length=20, unique=True, blank=False)
   Tipo = models.CharField(max_length=20, default='', null=False)
   Serie = models.CharField(max_length=20, default='', null=False)
@@ -53,9 +66,3 @@ class Datos_Acciones(models.Model):
 
   def __str__(self):
     return self.codigo
-
-class Acciones(models.Model):
-  Datos_Acciones_id = models.ForeignKey(Datos_Acciones,on_delete=models.CASCADE, null=False, blank=False)
-  Accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
-  Tercero_id = models.ManyToManyField('tercero.Tercero', blank=True)
-  Rut_emisor = models.CharField(max_length=13,blank=False,null=False)

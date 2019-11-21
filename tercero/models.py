@@ -2,8 +2,8 @@ from django.db import models
 from django.utils import timezone
 
 class Tercero(models.Model):
+  tercero_id = models.AutoField(primary_key=True)
   accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
-  acciones_id = models.ManyToManyField('accionista.Acciones', blank=True)
   nombres = models.CharField(max_length=100, null=False)
   apellidos = models.CharField(max_length=100, null=False)
   rol = models.CharField(max_length=200)
@@ -17,4 +17,4 @@ class Tercero(models.Model):
     self.save()
 
   def __str__(self):
-    return self.accionista_id   
+    return self.nombres  

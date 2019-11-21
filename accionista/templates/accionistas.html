@@ -25,9 +25,9 @@
     <div class="card" style="width: 100%;">
       <div class="card-body">
         <h3 class="card-title">RUN: {{ accionista.run }} - {{ accionista.nombres }} {{ accionista.apellidos }}</h3>
-        <p class="card-text">Correo: {{ accionista.email }}</p>
-        <a href="/accionistas/{{ accionista.id }}/" class= "btn btn-dark">Detalles</a>
-        <a href="/accionistas/{{ accionista.id }}/editar/" class= "btn btn btn-outline-warning">Editar</a> 
+
+        <a href="/accionistas/{{ accionista.accionista_id }}/" class= "btn btn-dark">Detalles</a>
+        <a href="/accionistas/{{ accionista.accionista_id }}/editar/" class= "btn btn btn-outline-warning">Editar</a> 
       </div>
     </div>
   {% endfor %}
