@@ -1,14 +1,11 @@
-from django.contrib import admin
+from django.conf.urls import url,re_path
 from django.urls import path, include
+from seguridad import views
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-  path('admin/', admin.site.urls),
-  path(r'', include('seguridad.urls')),
-  path(r'', include('accionista.urls')),
-  path(r'', include('tercero.urls')),
-  path(r'', include('traspaso.urls')),
+  url(r'^traspasos/$',views.HomePageView.as_view(),name="traspaso"),
 ]
 
 if settings.DEBUG:
