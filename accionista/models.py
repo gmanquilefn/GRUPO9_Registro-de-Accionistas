@@ -8,7 +8,6 @@ class Accionista(models.Model):
   nombres = models.CharField(max_length=100, default='', null=False, blank=False)
   apellidos = models.CharField(max_length=100, default='', null=False, blank=False)
   acciones_id = models.ManyToManyField('accionista.Acciones', blank=False)
-  terceros_id = models.ManyToManyField('tercero.Tercero', blank=True)
   created_at = models.DateTimeField(default=timezone.now)
   updated_at = models.DateTimeField(blank=True, null=True)
   accionistas = models.Manager()
@@ -49,7 +48,6 @@ class Firmas_Accionista(models.Model):
 
 class Acciones(models.Model):
   acciones_id = models.AutoField (primary_key=True)
-  accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
   tercero_id = models.ManyToManyField('tercero.Tercero', blank=True)
   rut_emisor = models.CharField(max_length=13,blank=False,null=False)
   
