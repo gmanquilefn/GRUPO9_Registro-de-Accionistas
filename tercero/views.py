@@ -19,7 +19,7 @@ class TercerosView(TemplateView):
 class CreateTercero(CreateView):
   model = Tercero
   template_name = './crear.html'
-  fields = ['nombres', 'apellidos', 'rol', 'poder', 'accionista_id']
+  fields = ['nombres', 'apellidos', 'rol', 'poder']
 
 class UpdateTercero(UpdateView):
   model = Tercero

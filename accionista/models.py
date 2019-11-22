@@ -7,7 +7,6 @@ class Accionista(models.Model):
   run = models.CharField(max_length=20, unique=True, null=False, blank=False)
   nombres = models.CharField(max_length=100, default='', null=False, blank=False)
   apellidos = models.CharField(max_length=100, default='', null=False, blank=False)
-  acciones_id = models.ManyToManyField('accionista.Acciones', blank=False)
   created_at = models.DateTimeField(default=timezone.now)
   updated_at = models.DateTimeField(blank=True, null=True)
   accionistas = models.Manager()
@@ -32,7 +31,7 @@ class Datos_Accionista(models.Model):
   Firma = models.FileField(upload_to="accionistas", blank=True, null=True)
 
   def __str__ (self):
-    return self.nacionalidad
+    return self.accionista_id
 
 class Firmas_Accionista(models.Model):
   accionista_id = models.ForeignKey(Accionista, on_delete=models.CASCADE, null=False, blank=False)
@@ -43,12 +42,12 @@ class Firmas_Accionista(models.Model):
   firma5 = models.ImageField(upload_to="accionistas", blank=True, null=True)
   
   def __str__(self):
-    return self.firma1
+    return self.accionista_id
 
 
 class Acciones(models.Model):
   acciones_id = models.AutoField (primary_key=True)
-  tercero_id = models.ManyToManyField('tercero.Tercero', blank=True)
+  accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
   rut_emisor = models.CharField(max_length=13,blank=False,null=False)
   
   def __str__(self):
@@ -63,4 +62,4 @@ class Datos_Acciones(models.Model):
   Estado = models.BooleanField(default=True)
 
   def __str__(self):
-    return self.codigo
+    return self.acciones_id

@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 class Tercero(models.Model):
   tercero_id = models.AutoField(primary_key=True)
   accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
