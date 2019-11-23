@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from tercero.models import Tercero
+from traspaso.models import Acciones
 
 class Accionista(models.Model):
   accionista_id = models.AutoField(primary_key=True)
@@ -29,6 +30,13 @@ class Datos_Accionista(models.Model):
   email = models.CharField(max_length=100, default='example@correo.com')
   fax = models.CharField(max_length=20, null=True)
   Firma = models.FileField(upload_to="accionistas", blank=True, null=True)
+  created_at = models.DateTimeField(default=timezone.now)
+  updated_at = models.DateTimeField(blank=True, null=True)
+  datos_accionistas = models.Manager()
+
+  def update(self):
+    self.updated_at = timezone.now()
+    self.save()
 
   def __str__ (self):
     return self.accionista_id
@@ -40,26 +48,13 @@ class Firmas_Accionista(models.Model):
   firma3 = models.ImageField(upload_to="accionistas", blank=True, null=True)
   firma4 = models.ImageField(upload_to="accionistas", blank=True, null=True)
   firma5 = models.ImageField(upload_to="accionistas", blank=True, null=True)
+  created_at = models.DateTimeField(default=timezone.now)
+  updated_at = models.DateTimeField(blank=True, null=True)
+  firmas_accionistas = models.Manager()
+
+  def update(self):
+    self.updated_at = timezone.now()
+    self.save()
   
   def __str__(self):
     return self.accionista_id
-
-
-class Acciones(models.Model):
-  acciones_id = models.AutoField (primary_key=True)
-  accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
-  rut_emisor = models.CharField(max_length=13,blank=False,null=False)
-  
-  def __str__(self):
-    return self.acciones_id
-
-class Datos_Acciones(models.Model):
-  acciones_id = models.ForeignKey(Acciones, on_delete=models.CASCADE, null=False, blank=False)
-  codigo = models.CharField(max_length=20, unique=True, blank=False)
-  Tipo = models.CharField(max_length=20, default='', null=False)
-  Serie = models.CharField(max_length=20, default='', null=False)
-  Cantidad = models.IntegerField(default='',null = False)
-  Estado = models.BooleanField(default=True)
-
-  def __str__(self):
-    return self.acciones_id
