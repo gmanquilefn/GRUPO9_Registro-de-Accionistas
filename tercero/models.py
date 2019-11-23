@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from accionista.models import  Accionista
 
 
 class Tercero(models.Model):
