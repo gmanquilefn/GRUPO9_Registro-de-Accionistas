@@ -24,7 +24,3 @@ class Accionista(models.Model):
 
   def __str__ (self):
     return self.nombres
-
-  """def guardar(self, *args, **kwargs):
-    if(self.end_date > self.start_date):"""
-s
