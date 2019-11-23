@@ -3,7 +3,6 @@ from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from accionista.models import Accionista
-from accionista.forms import FormularioCrear
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
 
@@ -23,7 +22,7 @@ class AccionistasView(LoginRequiredMixin, TemplateView):
 class CreateAccionista(LoginRequiredMixin, CreateView):
   model = Accionista
   template_name = './crear.html'
-  fields = ['run', 'nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'imagen']
+  fields = ['run', 'nombres', 'apellidos']
 
 class UpdateAccionista(LoginRequiredMixin, UpdateView):
   model = Accionista
@@ -32,9 +31,9 @@ class UpdateAccionista(LoginRequiredMixin, UpdateView):
 
 class DetalleAccionistaView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
-    id=kwargs["pk"]
+    accionista_id=kwargs["pk"]
     print(id)
-    return render(request, 'accionista.html', {'accionista' : Accionista.accionistas.get(id=id)})
+    return render(request, 'accionista.html', {'accionista' : Accionista.accionistas.get(accionista_id=accionista_id)})
 
 def FormularioVista(request):
   form = FormularioCrear(request.POST or None)
