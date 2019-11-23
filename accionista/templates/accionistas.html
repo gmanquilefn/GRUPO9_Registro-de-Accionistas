@@ -12,6 +12,7 @@
                   <i class="icon icon-search"></i>
                   <button type="submit" class="btn btn-success" style="width: 8rem; height: 3rem;">Buscar</button>
                   <a href="/accionistas/crear/" class="btn btn-success" style="line-height: 32px; width: 10rem; height: 3rem; border-color: dodgerblue; background-color: dodgerblue;">Crear Accionista</a>
+                  <a href="/accionistas/emisor/" class="btn btn-primary" style="line-height: 32px; width: 10rem; height: 3rem; border-color: dodgerblue; background-color: dodgerblue;">Emisor</a>
                 </span>
               </div>
             </div>
@@ -27,7 +28,7 @@
         <h3 class="card-title">RUN: {{ accionista.run }} - {{ accionista.nombres }} {{ accionista.apellidos }}</h3>
 
         <a href="/accionistas/{{ accionista.accionista_id }}/" class= "btn btn-dark">Detalles</a>
-        <a href="/accionistas/{{ accionista.accionista_id }}/editar/" class= "btn btn btn-outline-warning">Editar</a> 
+        <a href="/accionistas/{{ accionista.accionista_id }}/editar/" class= "btn btn btn-outline-warning">Editar</a>
       </div>
     </div>
   {% endfor %}

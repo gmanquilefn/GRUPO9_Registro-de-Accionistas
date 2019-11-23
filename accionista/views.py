@@ -23,12 +23,17 @@ class AccionistasView(LoginRequiredMixin, TemplateView):
 class CreateAccionista(LoginRequiredMixin, CreateView):
   model = Accionista
   template_name = './crear.html'
-  fields = ['run', 'nombres', 'apellidos']
+  fields = ['run', 'nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'imagen']
+
+class CreateEmisor(LoginRequiredMixin, CreateView):
+  model = Accionista
+  template_name = './emisor.html'
+  fields = ['run', 'razon social', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'imagen']
 
 class UpdateAccionista(LoginRequiredMixin, UpdateView):
   model = Accionista
   template_name = './editar.html'
-  fields = ['nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'imagen']
+  fields = ['nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'imagen']
 
 class DetalleAccionistaView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
@@ -44,5 +49,3 @@ def FormularioVista(request):
     'form': form
   }
   return render(request,"formularionuevo.html",context)
-
-  
