@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils import timezone
-from accionista.models import  Accionista
 
 
 class Tercero(models.Model):
@@ -10,6 +9,7 @@ class Tercero(models.Model):
   apellidos = models.CharField(max_length=100, null=False)
   rol = models.CharField(max_length=200)
   poder = models.TextField()
+  firma = models.ImageField(upload_to="terceros", blank=True, null=True)
   created_at = models.DateTimeField(default=timezone.now)
   updated_at = models.DateTimeField(blank=True, null=True)
   terceros = models.Manager()

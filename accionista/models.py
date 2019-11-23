@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from tercero.models import Tercero
 from traspaso.models import Acciones
 
 class Accionista(models.Model):
@@ -12,7 +13,7 @@ class Accionista(models.Model):
   telefono = models.CharField(max_length=20, default='')
   email = models.CharField(max_length=100, default='example@correo.com')
   fax = models.CharField(max_length=20, null=True)
-  Firma = models.ImageField(upload_to="accionistas", blank=True, null=True)
+  firma = models.ImageField(upload_to="accionistas", blank=True, null=True)
   created_at = models.DateTimeField(default=timezone.now)
   updated_at = models.DateTimeField(blank=True, null=True)
   accionistas = models.Manager()
@@ -26,5 +27,4 @@ class Accionista(models.Model):
 
   """def guardar(self, *args, **kwargs):
     if(self.end_date > self.start_date):"""
-
-
+s
