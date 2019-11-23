@@ -23,17 +23,17 @@ class AccionistasView(LoginRequiredMixin, TemplateView):
 class CreateAccionista(LoginRequiredMixin, CreateView):
   model = Accionista
   template_name = './crear.html'
-  fields = ['run', 'nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'firma']
+  fields = ['run', 'nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'Firma']
 
 class CreateEmisor(LoginRequiredMixin, CreateView):
   model = Accionista
   template_name = './emisor.html'
-  fields = ['run', 'nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'firma']
+  fields = ['run', 'nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'Firma']
 
 class UpdateAccionista(LoginRequiredMixin, UpdateView):
   model = Accionista
   template_name = './editar.html'
-  fields = ['nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'firma']
+  fields = ['nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'Firma']
 
 class DetalleAccionistaView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
