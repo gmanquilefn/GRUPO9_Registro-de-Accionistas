@@ -23,7 +23,7 @@
                       <li class="nav-item" role="presentation"><a class="nav-link active" href="/">Inicio</a></li>
                       <li class="nav-item" role="presentation"><a class="nav-link active" href="/accionistas/">Accionistas</a></li>
                       <li class="nav-item" role="presentation"><a class="nav-link active" href="/terceros/">Terceros</a></li>
-                      <li class="nav-item" role="presentation"><a class="nav-link" href="#">Traspasos</a></li>
+                      <li class="nav-item" role="presentation"><a class="nav-link active" href="/traspasos/">Traspasos</a></li>
                       <li class="nav-item" role="presentation"><a class="nav-link" href="#">Dividendos</a></li>
                       <li class="nav-item" role="presentation"><a class="nav-link active" href="{% url 'logout' %}">Cerrar Sesión</a></li>
                   </ul>
@@ -34,7 +34,7 @@
     {% block content %}
     {% endblock %}
     {% include "footer.html" %}
-    
+
     <script src="{% static 'assets/js/jquery.min.js' %}"></script>
     <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/js/smoothproducts.min.js' %}"></script>
