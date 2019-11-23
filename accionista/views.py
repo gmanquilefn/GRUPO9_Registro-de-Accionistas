@@ -3,6 +3,7 @@ from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from accionista.models import Accionista
+from traspaso.models import Acciones
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
 
@@ -43,3 +44,5 @@ def FormularioVista(request):
     'form': form
   }
   return render(request,"formularionuevo.html",context)
+
+  

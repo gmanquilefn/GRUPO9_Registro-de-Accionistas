@@ -8,6 +8,7 @@ urlpatterns = [
   path(r'', include('seguridad.urls')),
   path(r'', include('accionista.urls')),
   path(r'', include('tercero.urls')),
+  path(r'', include('traspaso.urls')),
 ]
 
 if settings.DEBUG:
