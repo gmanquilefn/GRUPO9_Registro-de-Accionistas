@@ -2,10 +2,12 @@ from django.db import models
 from django.utils import timezone
 
 
+
 class Acciones(models.Model):
   acciones_id = models.AutoField (primary_key=True)
   accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
   tercero_id = models.ManyToManyField('tercero.Tercero', blank=True, null=True)
+  emisor_id = models.ForeignKey('accionista.Emisor', on_delete=models.CASCADE, blank=True, null = True)
   tipo = models.CharField(max_length=20, default='', null=False)
   serie = models.CharField(max_length=20, default='', null=False)
   cantidad = models.IntegerField(default='',null = False)
