@@ -26,12 +26,17 @@ class AccionesView(LoginRequiredMixin, TemplateView):
 class AccionesView2(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
         acciones = Acciones.acciones.all()
-        return render(request, 'editar3.html', {'acciones' : acciones})
+        accionistas = Accionista.accionistas.all()
+        context = {
+            'acciones' : acciones,
+            'accionistas' : accionistas
+        }
+        return render(request, 'editar3.html', context)
 
 class CreateAcciones(LoginRequiredMixin, CreateView):
   model = Acciones
   template_name = './crear.html'
-  fields = ['accionista_id', 'tercero_id','tipo', 'serie', 'cantidad', 'estado']
+  fields = ['accionista_id', 'tercero_id','tipo', 'codigo', 'serie', 'cantidad', 'estado']
 
 class UpdateAcciones(LoginRequiredMixin, UpdateView):
   model = Acciones
