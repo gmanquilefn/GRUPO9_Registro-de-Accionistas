@@ -24,20 +24,3 @@ class Accionista(models.Model):
 
   def __str__ (self):
     return self.nombres
-
-class Emisor(models.Model):
-  emisor_id = models.AutoField(primary_key = True)
-  acciones_id = models.ForeignKey(Acciones, on_delete=models.CASCADE, blank=True, null = True)
-  rut = models.CharField(max_length=20, unique=True, null=False, blank=False)
-  nombreemisor = models.CharField(max_length=100, default='', null=False, blank=False)
-  razonsocial = models.CharField(max_length=100, default='', null=False, blank=False)
-  created_at = models.DateTimeField(default=timezone.now)
-  updated_at = models.DateTimeField(blank=True, null=True)
-  emisor = models.Manager()
-
-  def update(self):
-    self.updated_at = timezone.now()
-    self.save()
-
-  def __str__ (self):
-    return self.rut
