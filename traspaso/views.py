@@ -9,7 +9,7 @@ from django.db.models import Q
 
 class AccionesView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
-    return render(request, 'accionistas.html', {'accionistas' : accionistas})
+    return render(request, 'acciones.html', {'acciones' : acciones})
 
 class CreateAcciones(LoginRequiredMixin, CreateView):
   model = Acciones
