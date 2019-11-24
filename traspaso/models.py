@@ -1,11 +1,11 @@
 from django.db import models
 from django.utils import timezone
-
+from accionista.models import Accionista
 
 
 class Acciones(models.Model):
   acciones_id = models.AutoField (primary_key=True)
-  accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
+  accionista_id = models.ForeignKey(Accionista, on_delete=models.CASCADE, null=False, blank=False)
   tercero_id = models.ManyToManyField('tercero.Tercero', blank=True, null=True)
   codigo = models.CharField(max_length=20, null=False, blank=False)
   tipo = models.CharField(max_length=20, default='', null=False)

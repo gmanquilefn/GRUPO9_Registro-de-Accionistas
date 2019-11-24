@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils import timezone
 from tercero.models import Tercero
-from traspaso.models import Acciones
 
 class Accionista(models.Model):
   accionista_id = models.AutoField(primary_key=True)
