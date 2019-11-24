@@ -12,7 +12,7 @@ class TraspasoView(LoginRequiredMixin, TemplateView):
       queryset = request.GET.get("Buscar")
       accionistas = Accionista.accionista.all()
       if queryset:
-        acciones = Accionista.accionistas.filter(
+        accionistas = Accionista.accionistas.filter(
           Q( run__icontains = queryset)
         ).distinct()
     return render(request, 'traspaso.html', {'accionistas' : accionistas})
