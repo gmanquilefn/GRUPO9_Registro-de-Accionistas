@@ -6,16 +6,11 @@ from traspaso.models import Acciones
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
 
-class AccionesView(LoginRequiredMixin, TemplateView):
-  def get(self, request, **kwargs):
-    queryset = request.GET.get("Buscar")
-    acciones = Acciones.acciones.all()
-    return render(request, 'acciones.html', {'acciones' : acciones})
 
 class CreateAcciones(LoginRequiredMixin, CreateView):
   model = Acciones
   template_name = './crear.html'
-  fields = ['tipo', 'serie', 'cantidad', 'estado']
+  fields = ['accionista_id', 'tercero_id','tipo', 'serie', 'cantidad', 'estado']
 
 class UpdateAcciones(LoginRequiredMixin, UpdateView):
   model = Acciones
