@@ -5,12 +5,14 @@
   <h1>asdasdasddddd</h1>
 {% if acciones %}
 {% for acciones in acciones %}
+{% if accionista.accionista_id == acciones.accionista_id %}
   <div class="card" style="width: 100%;">
     <div class="card-body">
       <h3 class="card-title"> {{ acciones.tipo }} - {{ acciones.serie }} {{ acciones.cantidad }} - {{ acciones.estado }}</h3>
-      <a href="/acciones/{{ accionista.accionista_id }}/editar2/" class= "btn btn btn-outline-warning">Editar acciones</a>
+      <a href="/acciones/{{ acciones.accionista_id }}/editar2/" class= "btn btn btn-outline-warning">Editar acciones</a>
     </div>
   </div>
+{% endif %}
 {% endfor %}
 {% else %}
   <h1> No me wei ctm!</h1>
