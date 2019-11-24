@@ -25,7 +25,7 @@ class AccionesView(LoginRequiredMixin, TemplateView):
 class CreateAcciones(LoginRequiredMixin, CreateView):
   model = Acciones
   template_name = './crear.html'
-  fields = ['accionista_id', 'tercero_id','tipo', 'serie', 'cantidad', 'estado']
+  fields = ['accionista_id', 'tercero_id', 'emisor_id', 'tipo', 'serie', 'cantidad', 'estado']
 
 class UpdateAcciones(LoginRequiredMixin, UpdateView):
   model = Acciones

@@ -26,9 +26,9 @@ class CreateAccionista(LoginRequiredMixin, CreateView):
   fields = ['run', 'nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'firma']
 
 class CreateEmisor(LoginRequiredMixin, CreateView):
-  model = Accionista
+  model = Emisor
   template_name = './emisor.html'
-  fields = ['run', 'nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'firma']
+  fields = ['rut', 'nombreemisor', 'razonsocial']
 
 class UpdateAccionista(LoginRequiredMixin, UpdateView):
   model = Accionista
