@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from accionista.models import Accionista, Emisor
+from accionista.models import Accionista
 from traspaso.models import Acciones
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
@@ -24,11 +24,6 @@ class CreateAccionista(LoginRequiredMixin, CreateView):
   model = Accionista
   template_name = './crear.html'
   fields = ['run', 'nombres', 'apellidos', 'nacionalidad', 'direccion', 'telefono', 'email', 'fax', 'firma']
-
-class CreateEmisor(LoginRequiredMixin, CreateView):
-  model = Emisor
-  template_name = './emisor.html'
-  fields = ['rut', 'nombreemisor', 'razonsocial']
 
 class UpdateAccionista(LoginRequiredMixin, UpdateView):
   model = Accionista
