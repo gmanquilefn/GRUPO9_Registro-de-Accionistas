@@ -17,7 +17,6 @@ class AccionistasView(LoginRequiredMixin, TemplateView):
       ).distinct()
     return render(request, 'traspaso.html', {'accionistas' : accionistas})
 
-#dasdsa
 
 class AccionesView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
