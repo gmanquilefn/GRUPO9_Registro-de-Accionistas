@@ -28,6 +28,7 @@ class Accionista(models.Model):
 class Emisor(models.Model):
   emisor_id = models.AutoField(primary_key = True)
   rut = models.CharField(max_length=20, unique=True, null=False, blank=False)
+  acciones_id = models.ForeignKey(Acciones, on_delete=models.CASCADE, blank=True, null = True)
   nombreemisor = models.CharField(max_length=100, default='', null=False, blank=False)
   razonsocial = models.CharField(max_length=100, default='', null=False, blank=False)
   created_at = models.DateTimeField(default=timezone.now)
