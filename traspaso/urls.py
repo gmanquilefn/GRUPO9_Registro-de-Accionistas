@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^acciones/traspaso/$',views.AccionistasView.as_view(),name="acciones"),
     url(r'^acciones/crear/$',views.CreateAcciones.as_view(success_url="/acciones/"),name="crear"),
     re_path(r'^acciones/(?P<pk>\d+)/editar/$',views.UpdateAcciones.as_view(success_url="/acciones/"),name='editar'),
+    re_path(r'^acciones/(?P<pk>\d+)/editar2/$',views.UpdateAcciones.as_view(success_url="/acciones/"),name='editar'),
 ]
 
 if settings.DEBUG:
