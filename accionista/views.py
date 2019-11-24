@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from accionista.models import Accionista
+from accionista.models import Accionista, Emisor
 from traspaso.models import Acciones
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
