@@ -1,3 +1,4 @@
 from django.contrib import admin
+from traspaso.models import Acciones
 
-# Register your models here.
+admin.site.register(Acciones)
