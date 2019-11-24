@@ -5,11 +5,10 @@
   <h1>Testing, listado de acciones</h1>
 {% if acciones %}
 {% for acciones in acciones %}
-{% if accionistas %}
-  <h1>{{ accionista.apellidos }}</h1>
-{% endif %}
+
   <div class="card" style="width: 100%;">
     <div class="card-body">
+      <h1>{{ accionista.apellidos }}</h1>
       <h3 class="card-title">{{ acciones.accionista_id }} {{ acciones.tipo }} - {{ acciones.serie }} {{ acciones.cantidad }} - {{ acciones.estado }}</h3>
       <a href="/acciones/{{ acciones.accionista_id }}/editar2/" class= "btn btn btn-outline-warning">Editar acciones</a>
     </div>
