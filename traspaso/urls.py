@@ -5,7 +5,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url(r'^acciones/$',views.AccionesView.as_view(),name="acciones"),
     url(r'^acciones/crear/$',views.CreateAcciones.as_view(success_url="/acciones/"),name="crear"),
 ]
 
