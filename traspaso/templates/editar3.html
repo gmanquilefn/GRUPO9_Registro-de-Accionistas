@@ -5,7 +5,8 @@
   <h1>Testing, listado de acciones</h1>
 {% if acciones %}
 {% for acciones in acciones %}
-{% if acciones.accionista_id == accionista.nombres %}
+<h1>{% print(accionistas.nombres) %} que paso francisco</h1>
+{% if acciones.accionista_id == accionistas.nombres %}
   <div class="card" style="width: 100%;">
     <div class="card-body">
       <h3 class="card-title">{{ acciones.accionista_id }} {{ acciones.tipo }} - {{ acciones.serie }} {{ acciones.cantidad }} - {{ acciones.estado }}</h3>
