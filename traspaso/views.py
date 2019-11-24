@@ -7,6 +7,10 @@ from django.shortcuts import get_object_or_404
 from django.db.models import Q
 
 
+class AccionesView(LoginRequiredMixin, TemplateView):
+  def get(self, request, **kwargs):
+    return render(request, 'accionistas.html', {'accionistas' : accionistas})
+
 class CreateAcciones(LoginRequiredMixin, CreateView):
   model = Acciones
   template_name = './crear.html'
