@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^acciones/$',views.AccionesView.as_view(),name="acciones"),
+    url(r'^acciones/traspaso/$',views.AccionistasView.as_view(),name="acciones"),
     url(r'^acciones/crear/$',views.CreateAcciones.as_view(success_url="/acciones/"),name="crear"),
     re_path(r'^acciones/(?P<pk>\d+)/editar/$',views.UpdateAcciones.as_view(success_url="/acciones/"),name='editar'),
 ]

@@ -7,15 +7,15 @@ from accionista.models import Accionista
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
 
-class TraspasoView(LoginRequiredMixin, TemplateView):
+class AccionistasView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
-      queryset = request.GET.get("Buscar")
-      accionistas = Accionista.accionista.all()
-      if queryset:
-        accionistas = Accionista.accionistas.filter(
-          Q( run__icontains = queryset)
-        ).distinct()
-    return render(request, 'traspaso.html')
+    queryset = request.GET.get("Buscar")
+    accionistas = Accionista.accionistas.all()
+    if queryset:
+      accionistas = Accionista.accionistas.filter(
+        Q( run__icontains = queryset)
+      ).distinct()
+    return render(request, 'traspaso.html', {'accionistas' : accionistas})
 
 #dasdsa
 

@@ -13,7 +13,7 @@ class Tercero(models.Model):
   nombres = models.CharField(max_length=100, null=False)
   apellidos = models.CharField(max_length=100, null=False)
   rol = models.CharField(max_length=200, choices= ROL_CHOICES, default ='')
-  poder = models.BooleanField(null = True)
+  poder = models.BooleanField()
   firma = models.ImageField(upload_to="terceros", blank=True, null=True)
   created_at = models.DateTimeField(default=timezone.now)
   updated_at = models.DateTimeField(blank=True, null=True)
