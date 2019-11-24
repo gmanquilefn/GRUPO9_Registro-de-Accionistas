@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'^acciones/$',views.AccionesView.as_view(),name="acciones"),
     url(r'^acciones/traspaso/$',views.AccionistasView.as_view(),name="acciones"),
     url(r'^acciones/crear/$',views.CreateAcciones.as_view(success_url="/acciones/"),name="crear"),
-    re_path(r'^acciones/(?P<pk>\d+)/editar/$',views.AccionesView2.as_view(),name='editar'),
+    url(r'^acciones/(?P<pk>\d+)/editar/$',views.AccionesView2.as_view(),name='editar'),
     re_path(r'^acciones/(?P<pk>\d+)/editar2/$',views.UpdateAcciones.as_view(success_url="/acciones/"),name='editar'),
 ]
 
