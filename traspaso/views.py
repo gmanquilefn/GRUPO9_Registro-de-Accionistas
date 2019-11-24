@@ -24,7 +24,7 @@ class AccionesView(LoginRequiredMixin, TemplateView):
 
 class AccionesView2(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
-        accioness = Acciones.acciones.all()
+        accioness = Acciones.acciones.filter()
         return render(request, 'editar3.html', {'acciones' : accioness})
 
 class CreateAcciones(LoginRequiredMixin, CreateView):
