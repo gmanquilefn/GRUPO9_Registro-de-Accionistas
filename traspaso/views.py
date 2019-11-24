@@ -20,11 +20,13 @@ class AccionistasView(LoginRequiredMixin, TemplateView):
 
 class AccionesView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
+
     return render(request, 'acciones.html')
 
 class AccionesView2(LoginRequiredMixin, TemplateView):
     def get(self, request, **kwargs):
         accioness = Acciones.acciones.filter()
+        print(acciones.accionista_id.all())
         return render(request, 'editar3.html', {'acciones' : accioness})
 
 class CreateAcciones(LoginRequiredMixin, CreateView):
