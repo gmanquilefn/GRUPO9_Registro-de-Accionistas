@@ -7,7 +7,7 @@ class Acciones(models.Model):
   acciones_id = models.AutoField (primary_key=True)
   accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
   tercero_id = models.ManyToManyField('tercero.Tercero', blank=True, null=True)
-  codigo = models.CharField(max_length=20, unique=True, null=False, blank=False)
+  codigo = models.CharField(max_length=20, null=False, blank=False)
   tipo = models.CharField(max_length=20, default='', null=False)
   serie = models.CharField(max_length=20, default='', null=False)
   cantidad = models.IntegerField(default='',null = False)
