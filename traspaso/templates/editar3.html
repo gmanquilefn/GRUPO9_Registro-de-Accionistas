@@ -5,7 +5,7 @@
   <h1>asdasdasddddd</h1>
 {% if acciones %}
 {% for acciones in acciones %}
-{% if accionista_id == acciones.accionista_id %}
+{% if accionista.nombres == acciones.accionista_id %}
   <div class="card" style="width: 100%;">
     <div class="card-body">
       <h3 class="card-title"> {{ acciones.tipo }} - {{ acciones.serie }} {{ acciones.cantidad }} - {{ acciones.estado }}</h3>
