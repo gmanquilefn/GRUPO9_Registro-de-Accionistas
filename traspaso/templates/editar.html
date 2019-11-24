@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<div>
 <div style="margin-top: 7rem; width: 20rem;">
   <form action="" method="post">
     {% csrf_token %}
@@ -13,5 +14,18 @@
       </tr>
     </table>
   </form>
+</div>
+{% if acciones %}
+{% for acciones in acciones %}
+  <div class="card" style="width: 100%;">
+    <div class="card-body">
+      <h3 class="card-title"> {{ acciones.tipo }} - {{ acciones.serie }} {{ acciones.cantidad }} - {{ acciones.estado }}</h3>
+      <a href="/acciones/{{ accionista.accionista_id }}/editar/" class= "btn btn btn-outline-warning">Editar acciones</a>
+    </div>
+  </div>
+{% endfor %}
+{% else %}
+  <h1> No me wei ctm!</h1>
+{% endif %}
 </div>
 {% endblock %}
