@@ -2,8 +2,8 @@
 {% load static %}
 {% block content %}
 <div>
-{% if acciones %}
-{% for acciones in acciones %}
+{% if accioness %}
+{% for acciones in accioness %}
   <div class="card" style="width: 100%;">
     <div class="card-body">
       <h3 class="card-title"> {{ acciones.tipo }} - {{ acciones.serie }} {{ acciones.cantidad }} - {{ acciones.estado }}</h3>

@@ -22,6 +22,11 @@ class AccionesView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
     return render(request, 'acciones.html')
 
+class AccionesView(LoginRequiredMixin, TemplateView):
+  def get(self, request, **kwargs):
+      accioness = Acciones.acciones.all()
+    return render(request, 'editar.html' {'acciones' : accioness})
+
 class CreateAcciones(LoginRequiredMixin, CreateView):
   model = Acciones
   template_name = './crear.html'
@@ -29,5 +34,5 @@ class CreateAcciones(LoginRequiredMixin, CreateView):
 
 class UpdateAcciones(LoginRequiredMixin, UpdateView):
   model = Acciones
-  template_name = './editar.html'
+  template_name = './editar2.html'
   fields = ['tipo', 'serie', 'cantidad', 'estado']
