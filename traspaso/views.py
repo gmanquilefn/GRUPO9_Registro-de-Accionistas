@@ -15,7 +15,7 @@ class TraspasoView(LoginRequiredMixin, TemplateView):
         accionistas = Accionista.accionistas.filter(
           Q( run__icontains = queryset)
         ).distinct()
-    return render(request, 'traspaso.html', {'accionistas' : accionistas})
+    return render(request, 'traspaso.html')
 
 #dasdsa
 
