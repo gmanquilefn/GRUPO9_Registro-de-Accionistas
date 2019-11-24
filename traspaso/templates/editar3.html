@@ -5,15 +5,16 @@
   <h1>Testing, listado de acciones</h1>
 {% if acciones %}
 {% for acciones in acciones %}
-<h1>{{ acciones.accionista_id }} que paso francisco</h1>
-{% if acciones.accionista_id == accionistas.nombres %}
+{% if accionistas %}
+  <h1>{{ accionista.apellidos }}</h1>
+{% endif %}
   <div class="card" style="width: 100%;">
     <div class="card-body">
       <h3 class="card-title">{{ acciones.accionista_id }} {{ acciones.tipo }} - {{ acciones.serie }} {{ acciones.cantidad }} - {{ acciones.estado }}</h3>
       <a href="/acciones/{{ acciones.accionista_id }}/editar2/" class= "btn btn btn-outline-warning">Editar acciones</a>
     </div>
   </div>
-{% endif %}
+
 {% endfor %}
 {% else %}
   <h1> No tiene acciones registradas! </h1>
