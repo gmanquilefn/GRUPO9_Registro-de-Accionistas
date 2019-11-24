@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 urlpatterns = [
   url(r'^accionistas/$',views.AccionistasView.as_view(),name="accionistas"),
   url(r'^accionistas/crear/',views.CreateAccionista.as_view(success_url="/accionistas/"),name="crear"),
-  url(r'^accionistas/emisor/',views.CreateEmisor.as_view(success_url="/accionistas/"),name="Emisor"),
+  url(r'^accionistas/emisor/',views.CreateEmisor.as_view(success_url="/accionistas/"),name="emisor"),
   re_path(r'^accionistas/(?P<pk>\d+)/editar/$',views.UpdateAccionista.as_view(success_url="/accionistas/"),name='editar'),
   re_path(r'accionistas/(?P<pk>\d+)/$',views.DetalleAccionistaView.as_view(),name="accionista"),
 ]
