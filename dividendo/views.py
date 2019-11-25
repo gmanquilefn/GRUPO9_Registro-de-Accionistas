@@ -28,7 +28,7 @@ class CreateAcciones(LoginRequiredMixin, CreateView):
   template_name = './crear.html'
   fields = ['accionista_id', 'monto','Estado_pago']
 
-class UpdateAcciones(LoginRequiredMixin, UpdateView):
+class UpdateDividendos(LoginRequiredMixin, UpdateView):
   model = Pago_dividendo
   template_name = './editar.html'
   fields = ['Estado_pago']

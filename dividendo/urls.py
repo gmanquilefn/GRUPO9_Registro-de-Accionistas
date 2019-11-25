@@ -8,5 +8,6 @@ urlpatterns= [
     url(r'^dividendos/$',views.AccionesView.as_view(),name="dividendos"),
     url(r'^dividendos/pago/$',views.AccionistasView.as_view(),name="dividendos"),
     url(r'^dividendos/crear/$',views.CreateAcciones.as_view(success_url="/dividendos/"),name="crear"),
+     re_path(r'^dividendos/pago/(?P<pk>\d+)/editar/$',views.UpdateDividendos.as_view(success_url="/dividendos/pago"),name='editar'),
 
 ]

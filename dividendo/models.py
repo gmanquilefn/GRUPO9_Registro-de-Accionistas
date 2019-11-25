@@ -8,8 +8,9 @@ class Pago_dividendo(models.Model):
     accionista_id = models.ForeignKey(Accionista, blank=False, null=False, on_delete=models.CASCADE)
     monto = models.IntegerField(blank=False, null=False)
     ESTADO_CHOICES = (
-        ('REALIZADO', 'Realizado'),
+        ('APROBADO', 'Aprobado'),
         ('PENDIENTE', 'Pendiente'),
+        ('RECHAZADO','Rechazado'),
     )
     Estado_pago = models.CharField(max_length=20, choices=ESTADO_CHOICES, blank=False, null=False)
     created_at = models.DateTimeField(default=timezone.now)
