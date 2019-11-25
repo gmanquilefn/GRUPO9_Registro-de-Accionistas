@@ -10,7 +10,7 @@
               <span class="input-group-list">
                 <i class="icon icon-search"></i>
                 <button type="submit" class="btn btn-success" style="width: 8rem; height: 3rem;">Buscar</button>
-                <a href="/acciones/creartraspaso/" class="btn btn-success" style="line-height: 32px; width: 10rem; height: 3rem; border-color: dodgerblue; background-color: dodgerblue;">Registrar Historial</a>
+                <a href="/acciones/creartraspaso/" class="btn btn-success" style="line-height: 32px; width: 10rem; height: 3rem; border-color: dodgerblue; background-color: dodgerblue;">Registrar Traspaso</a>
               </span>
             </div>
           </form>
@@ -22,11 +22,10 @@
       {% for traspaso in traspasos %}
         <div class="card" style="width: 100%;">
           <div class="card-body">
-            <h3 class="card-title">Run venta: {{ traspaso.run_venta }}
-                                  Run compra: {{ traspaso.run_compra }}
-                                  Estado: {{ traspaso.estado }}
-                                  Fecha: {{ traspaso.created_at }}
-                                  Codigo acciones: {{ traspaso.acciones_id }}</h3>
+            <h3 class="card-title">Run venta: {{ traspaso.run_venta }} // Run compra: {{ traspaso.run_compra }}</h3>
+            <h3 class="card-title">Estado: {{ traspaso.estado }}</h3>
+            <h3 class="card-title">Fecha: {{ traspaso.created_at }} </h3>
+            <h3 class="card-title">Codigo acciones: {{ traspaso.acciones_id }}</h3>
           </div>
         </div>
       {% endfor %}
