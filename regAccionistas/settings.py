@@ -33,7 +33,7 @@ INSTALLED_APPS = [
   'accionista',
   'traspaso',
   'tercero',
-  'dividendo'
+  'dividendo',
 ]
 
 MIDDLEWARE = [
