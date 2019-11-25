@@ -15,8 +15,8 @@
       </div>
     </div>
     <div class="row mt-5 justify-content-center">
-    {% if Pago_dividendos %}
-    {% for dividendo in Pago_dividendos %}
+    {% if pago %}
+    {% for dividendo in pago %}
       <div class="card" style="width: 100%;">
         <div class="card-body">
           <h3 class="card-title">RUN: {{ dividendo.accionista_id }} - {{ dividendo.monto }} {{ dividendo.Estado_pago }}</h3>

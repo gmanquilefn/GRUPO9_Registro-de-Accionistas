@@ -14,11 +14,11 @@ class Pago_dividendo(models.Model):
     Estado_pago = models.CharField(max_length=20, choices=ESTADO_CHOICES, blank=False, null=False)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(blank=True, null=True)
-    Pago_dividendos = models.Manager()
+    pago = models.Manager()
 
     def update(self):
         self.updated_at = timezone.now()
         self.save()
 
     def __str__ (self):
-        return self.pago_id
+        return self.Estado_pago
