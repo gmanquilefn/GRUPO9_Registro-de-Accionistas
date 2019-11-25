@@ -6,7 +6,7 @@
         <div class="col-md-12 search">
           <form action="" method="get">
             <div class="input-group col-md-12">
-              <input type="text" class="form-control" style="height: 3rem;" placeholder="Digite Run" name="Buscar">
+              <input type="text" class="form-control" style="height: 3rem;" placeholder="Digite Run o Codigo de acciones" name="Buscar">
               <span class="input-group-list">
                 <i class="icon icon-search"></i>
                 <button type="submit" class="btn btn-success" style="width: 8rem; height: 3rem;">Buscar</button>
@@ -22,7 +22,11 @@
       {% for traspaso in traspasos %}
         <div class="card" style="width: 100%;">
           <div class="card-body">
-            <h3 class="card-title">Run venta: {{ traspaso.run_venta }} - Run compra {{ traspaso.run_compra }} - {{ traspaso.estado }} {{ traspaso.created_at }} -Codigo acciones {{ traspaso.acciones_id }}</h3>
+            <h3 class="card-title">Run venta: {{ traspaso.run_venta }}
+                                  Run compra: {{ traspaso.run_compra }}
+                                  Estado: {{ traspaso.estado }}
+                                  Fecha: {{ traspaso.created_at }}
+                                  Codigo acciones: {{ traspaso.acciones_id }}</h3>
           </div>
         </div>
       {% endfor %}
