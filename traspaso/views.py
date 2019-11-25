@@ -13,7 +13,7 @@ class AccionistasView(LoginRequiredMixin, TemplateView):
     accioness = Acciones.acciones.all()
     if queryset:
       accioness = Acciones.acciones.filter(
-        Q( accionista_id__icontains = queryset)
+        Q( accionista_id__name__icontains = queryset)
       ).distinct()
     return render(request, 'traspaso.html', {'accioness' : accioness})
 
