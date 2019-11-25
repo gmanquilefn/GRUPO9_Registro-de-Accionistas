@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+  <div class="container" style="width: 50rem; margin-top: 10rem;" >
+      <div class="row">
+        <div class="col-md-12 search">
+              <div class="input-group col-md-12">
+                  <input type="text" class="form-control" style="height: 3rem;" placeholder="Digite Run" name="Buscar">
+                  <span class="input-group-list">
+                    <i class="icon icon-search"></i>
+                    <button type="submit" class="btn btn-success" style="width: 8rem; height: 3rem;">Buscar</button>
+                  </span>
+              </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 justify-content-center">
+    {% if Pago_dividendos %}
+    {% for dividendo in Pago_dividendos %}
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <h3 class="card-title">RUN: {{ dividendo.accionista_id }} - {{ dividendo.monto }} {{ dividendo.Estado_pago }}</h3>
+          <a href="/acciones/{{ accionista.accionista_id }}/editar3/" class= "btn btn btn-outline-warning">Editar Acciones</a>
+        </div>
+      </div>
+    {% endfor %}
+    {% else %}
+      <h1> No existen Pagos realizados!</h1>
+    {% endif %}
+    </div>
+</div>
+{% endblock %}
