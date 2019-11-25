@@ -11,12 +11,12 @@ from django.db.models import Q
 class AccionistasView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
     queryset = request.GET.get("Buscar")
-    accionistas = Pago_dividendo.pago.all()
+    pago = Pago_dividendo.pago.all()
     if queryset:
-      accionistas = Pago_dividendo.pago.filter(
-        Q( run__icontains = queryset)
+      pago = Pago_dividendo.pago.filter(
+        Q( accionista_id__run__icontains = queryset)
       ).distinct()
-    return render(request, 'pago.html', {'pago' : accionistas})
+    return render(request, 'pago.html', {'pago' : pago})
 
 class AccionesView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
