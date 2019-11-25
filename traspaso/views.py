@@ -10,12 +10,12 @@ from django.db.models import Q
 class AccionistasView(LoginRequiredMixin, TemplateView):
   def get(self, request, **kwargs):
     queryset = request.GET.get("Buscar")
-    accionistas = Accionista.accionistas.all()
+    acciones = Acciones.acciones.all()
     if queryset:
-      accionistas = Accionista.accionistas.filter(
-        Q( run__icontains = queryset)
+      acciones = Acciones.acciones.filter(
+        Q( accionista_id__icontains = queryset)
       ).distinct()
-    return render(request, 'traspaso.html', {'accionistas' : accionistas})
+    return render(request, 'traspaso.html', {'acciones' : acciones})
 
 
 class AccionesView(LoginRequiredMixin, TemplateView):

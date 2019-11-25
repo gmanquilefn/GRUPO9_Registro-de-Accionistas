@@ -22,4 +22,4 @@ class Accionista(models.Model):
     self.save()
 
   def __str__ (self):
-    return self.nombres
+    return self.run
