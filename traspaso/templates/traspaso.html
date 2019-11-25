@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+  <div class="container" style="width: 50rem; margin-top: 10rem;" >
+      <div class="row">
+        <div class="col-md-12 search">
+          <form action="" method="get">
+            <div class="input-group col-md-12">
+              <input type="text" class="form-control" style="height: 3rem;" placeholder="Digite Run" name="Buscar">
+              <span class="input-group-list">
+                <i class="icon icon-search"></i>
+                <button type="submit" class="btn btn-success" style="width: 8rem; height: 3rem;">Buscar</button>
+              </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 justify-content-center">
+      {% if accioness %}
+      {% for acciones in accioness %}
+        <div class="card" style="width: 100%;">
+          <div class="card-body">
+            <h3 class="card-title">{{ acciones.accionista_id }} {{ acciones.tipo }} - {{ acciones.serie }} {{ acciones.cantidad }} - {{ acciones.estado }}</h3>
+            <a href="/acciones/{{ acciones.acciones_id }}/editar2/" class= "btn btn btn-outline-warning">Editar acciones</a>
+          </div>
+        </div>
+      {% endfor %}
+      {% else %}
+        <h1> No tiene acciones registradas! </h1>
+      {% endif %}
+    </div>
+</div>
+{% endblock %}

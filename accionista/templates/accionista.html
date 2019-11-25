@@ -2,14 +2,11 @@
 {% block content %}
 <div class="container mt-3">
   <h3 style="margin-top: 7rem;">Detalles del accionista</h3>
-  <a href="/accionistas/{{ accionista.id }}/editar/" class= "btn btn-outline-warning mb-2">Editar</a>
+  <a href="/accionistas/{{ accionista.accionista_id }}/editar/" class= "btn btn-outline-warning mb-2">Editar</a>
   <a href="/accionistas/" class= "btn  btn-secondary mb-2">Volver</a>
   <table class="table">
     <tbody>
-      <tr>
-        <th scope="row">N°</th>
-        <td>{{ accionista.id }}</td>
-      </tr>
+
       <tr>
         <th scope="row">RUN</th>
         <td>{{ accionista.run }}</td>
@@ -23,24 +20,20 @@
         <td>{{ accionista.apellidos }}</td>
       </tr>
       <tr>
-        <th scope="row">Total de acciones</th>
-        <td>{{ accionista.totalAcciones }}</td>
+        <th scope="row">Nacionalidad</th>
+        <td>{{ accionista.nacionalidad }}</td>
       </tr>
       <tr>
-        <th scope="row">Email</th>
-        <td>{{ accionista.email }}</td>
+        <th scope="row">Direccion</th>
+        <td>{{ accionista.direccion }}</td>
       </tr>
       <tr>
         <th scope="row">Telefono</th>
         <td>{{ accionista.telefono }}</td>
       </tr>
       <tr>
-        <th scope="row">Nacionalidad</th>
-        <td>{{ accionista.nacionalidad }}</td>
-      </tr>
-      <tr>
-        <th scope="row">Dirección</th>
-        <td>{{ accionista.direccion }}</td>
+        <th scope="row">Email</th>
+        <td>{{ accionista.email }}</td>
       </tr>
       <tr>
         <th scope="row">Fax</th>
@@ -48,7 +41,7 @@
       </tr>
       <tr>
         <th scope="row">Firma</th>
-        <td>{{ accionista.imagen }}</td>
+        <td>{{ accionista.firma }}</td>
       </tr>
     </tbody>
   </table>

@@ -1,11 +1,17 @@
 from django.conf.urls import url,re_path
 from django.urls import path, include
-from seguridad import views
+from traspaso import views
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-  url(r'^traspasos/$',views.HomePageView.as_view(),name="traspaso"),
+    url(r'^acciones/$',views.AccionesView.as_view(),name="acciones"),
+    url(r'^acciones/traspaso/$',views.AccionistasView.as_view(),name="acciones"),
+    url(r'^acciones/historial/$',views.TraspasosView.as_view(),name="acciones"),
+    url(r'^acciones/crear/$',views.CreateAcciones.as_view(success_url="/acciones/"),name="crear"),
+    url(r'^acciones/creartraspaso/$',views.CreateTraspaso.as_view(success_url="/acciones/"),name="crear"),
+    url(r'^acciones/(?P<pk>\d+)/editar3/$',views.AccionesView2.as_view(),name='accionessssss'),
+    re_path(r'^acciones/(?P<pk>\d+)/editar2/$',views.UpdateAcciones.as_view(success_url="/acciones/"),name='editar'),
 ]
 
 if settings.DEBUG:

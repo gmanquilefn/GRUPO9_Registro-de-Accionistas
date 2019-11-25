@@ -10,8 +10,6 @@
 # Django #
 *.log
 *.pot
-*.py[cod]
-*.pyc
 __pycache__
 db.sqlite3
 media
@@ -57,10 +55,6 @@ media
 .idea/**/uiDesigner.xml 
 .idea/**/gradle.xml 
 .idea/**/libraries 
-
-# Python # 
-*.py[cod] 
-*$py.class 
 
 # Distribution / packaging 
 .Python build/ 

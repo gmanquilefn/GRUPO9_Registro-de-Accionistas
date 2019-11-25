@@ -2,12 +2,12 @@
 {% block content %}
 <div class="container mt-3">
   <h3 style="margin-top: 7rem;">Detalles del tercero</h3>
-  <a href="/terceros/{{ tercero.id }}/editar/" class= "btn btn-outline-warning mb-2">Editar</a>
+  <a href="/terceros/{{ tercero.tercero_id }}/editar/" class= "btn btn-outline-warning mb-2">Editar</a>
   <a href="/terceros/" class= "btn  btn-secondary mb-2">Volver</a>
   <table class="table">
     <tbody>
       <tr>
-        <th scope="row">N°</th>
+        <th scope="row">Accionista</th>
         <td>{{ tercero.accionista_id }}</td>
       </tr>
       <tr>
@@ -17,6 +17,10 @@
       <tr>
         <th scope="row">Apellidos</th>
         <td>{{ tercero.apellidos }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Rol</th>
+        <td>{{ tercero.rol }}</td>
       </tr>
     </tbody>
   </table>
