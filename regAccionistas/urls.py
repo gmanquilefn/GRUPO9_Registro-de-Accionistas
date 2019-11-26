@@ -9,6 +9,7 @@ urlpatterns = [
   path(r'', include('accionista.urls')),
   path(r'', include('tercero.urls')),
   path(r'', include('traspaso.urls')),
+  path(r'', include('dividendo.urls')),
 ]
 
 if settings.DEBUG:
