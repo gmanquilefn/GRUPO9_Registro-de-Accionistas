@@ -20,7 +20,11 @@
       </tr>
       <tr>
         <th scope="row">Rol</th>
-        <td>{{ tercero.rol }}</td>
+        <td>{{ tercero.rol.upper }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Firma</th>
+        <td><img src="{{ tercero.firma.url }}" class="img-fluid img-thumbnail firma"></td>
       </tr>
     </tbody>
   </table>
