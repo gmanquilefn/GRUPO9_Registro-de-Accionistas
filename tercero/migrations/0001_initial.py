@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('firma', models.ImageField(blank=True, null=True, upload_to='terceros')),
                 ('created_at', models.DateTimeField(default=django.utils.timezone.now)),
                 ('updated_at', models.DateTimeField(blank=True, null=True)),
-                ('accionista_id', models.ManyToManyField(to='accionista.Accionista')),
+                ('accionista', models.ManyToManyField(to='accionista.Accionista')),
             ],
             managers=[
                 ('terceros', django.db.models.manager.Manager()),

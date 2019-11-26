@@ -2,14 +2,14 @@ from django.db import models
 from django.utils import timezone
 
 ROL_CHOICES = (
-    ('apoderado','APODERADO'),
-    ('corredor', 'CORREDOR'),
-    ('representante','REPRESENTANTE'),
+  ('apoderado','APODERADO'),
+  ('corredor', 'CORREDOR'),
+  ('representante','REPRESENTANTE'),
 )
 
 class Tercero(models.Model):
   tercero_id = models.AutoField(primary_key=True)
-  accionista_id = models.ManyToManyField('accionista.Accionista', blank=False)
+  accionista = models.ManyToManyField('accionista.Accionista', blank=False)
   run = models.CharField(max_length=20, null=False, blank=False)
   nombres = models.CharField(max_length=100, null=False)
   apellidos = models.CharField(max_length=100, null=False)
