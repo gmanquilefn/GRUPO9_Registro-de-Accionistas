@@ -12,12 +12,13 @@ class Accionista(models.Model):
   telefono = models.CharField(max_length=20, default='', blank= True, null = True)
   email = models.CharField(max_length=100, default='example@correo.com', blank= True, null = True)
   fax = models.CharField(max_length=20, null=True, blank = True)
-  firma = models.ImageField(upload_to="accionistas", blank=True, null=True)
+  firma = models.ImageField(upload_to="accionistas")
   created_at = models.DateTimeField(default=timezone.now)
   updated_at = models.DateTimeField(blank=True, null=True)
   accionistas = models.Manager()
 
   def update(self):
+    self.firma = models.ImageField(upload_to="accionistas")
     self.updated_at = timezone.now()
     self.save()
 
